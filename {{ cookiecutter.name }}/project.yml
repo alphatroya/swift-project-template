@@ -20,3 +20,4 @@ targets:
     type: application
     platform: iOS
     sources: [{{ cookiecutter.name }}]
+    scheme: {}
