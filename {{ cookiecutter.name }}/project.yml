@@ -1,0 +1,22 @@
+name: {{ cookiecutter.name }}
+options:
+  bundleIdPrefix: {{ cookiecutter.bundle }}
+  deploymentTarget:
+    iOS: {{ cookiecutter.deployment_target }}
+configs:
+  Debug: debug
+  Internal: release
+  Release: release
+settings:
+  configs:
+    Debug:
+      OTHER_SWIFT_FLAGS: -D DEBUG
+    Internal:
+      OTHER_SWIFT_FLAGS: -D INTERNAL
+    Release:
+      OTHER_SWIFT_FLAGS: -D RELEASE
+targets:
+  {{ cookiecutter.name }}:
+    type: application
+    platform: iOS
+    sources: [{{ cookiecutter.name }}]

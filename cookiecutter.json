@@ -1,0 +1,6 @@
+{
+    "name": "Project",
+    "bundle": "org.company.application",
+    "deployment_target": "10.0",
+    "organization_name": "Heads and Hands"
+}
