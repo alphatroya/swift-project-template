@@ -28,6 +28,11 @@ targets:
     prebuildScripts:
       - script: |
                 if [ "${CONFIGURATION}" == "Debug" ]; then
+                  mint run swiftgen/swiftgen
+                fi
+        name: SwiftGen
+      - script: |
+                if [ "${CONFIGURATION}" == "Debug" ]; then
                   mint run realm/swiftlint
                 fi
         name: SwiftLint
