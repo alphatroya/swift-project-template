@@ -11,5 +11,5 @@ echo '.idea' >> .gitignore
 # Trigger initial commit
 git init
 git add .
-git commit -S -m "Initial commit"
+git commit -m "Initial commit"
 git checkout -b develop
