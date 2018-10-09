@@ -1,4 +1,4 @@
-# My iOS app template
+# My new iOS app template
 
 [![Build Status](https://travis-ci.com/alphatroya/swift-project-template.svg?branch=master)](https://travis-ci.com/alphatroya/swift-project-template)
 
@@ -16,3 +16,11 @@ brew install cookiecutter mint
 ```
 
 After that run `cookiecutter gh:alphatroya/swift-project-template`.
+
+## Author
+
+Alexey Korolev, alphatroya@gmail.com
+
+## License
+
+Project is available under the MIT license. See the LICENSE file for more info.
