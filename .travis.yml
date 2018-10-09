@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode10
+xcode_sdk: iphoneos11.0
+script:
+  - brew install cookiecutter mint
+  - cookiecutter --no-input .
