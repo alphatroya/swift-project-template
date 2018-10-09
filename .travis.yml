@@ -2,7 +2,7 @@ language: objective-c
 osx_image: xcode10
 xcode_sdk: iphoneos11.0
 env:
-  - MINT_PATH="./mint"
+  - MINT_PATH="~/mint_cache"
 cache:
   directories:
     - $MINT_PATH
