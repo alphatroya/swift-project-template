@@ -1,0 +1,12 @@
+input_dir: {{ cookiecutter.name }}/Resources/
+output_dir: {{ cookiecutter.name }}/Classes/UIKit/Extensions/
+strings:
+    inputs: ru.lproj/Localizable.strings
+    outputs:
+        templateName: structured-swift4
+        output: Strings.swift
+xcassets:
+    inputs: Assets.xcassets
+    outputs:
+        templateName: swift4
+        output: Images.swift

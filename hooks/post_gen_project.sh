@@ -3,6 +3,9 @@
 # Generate xcodeproj file
 mint run "yonaskolb/XcodeGen"
 
+# Generate SwiftGen files
+mint run "swiftgen/swiftgen"
+
 # Download .gitignore file
 curl 'https://www.gitignore.io/api/swift,macos,fastlane,carthage' > .gitignore
 echo 'Carthage/Checkouts' >> .gitignore

@@ -8,6 +8,10 @@ configs:
   Internal: release
   Release: release
 settings:
+  base:
+    VERSIONING_SYSTEM: apple-generic
+    CURRENT_PROJECT_VERSION: 1
+    SWIFT_VERSION: 4.2
   configs:
     Debug:
       OTHER_SWIFT_FLAGS: -D DEBUG
@@ -21,3 +25,14 @@ targets:
     platform: iOS
     sources: [{{ cookiecutter.name }}]
     scheme: {}
+    prebuildScripts:
+      - script: |
+                if [ "${CONFIGURATION}" == "Debug" ]; then
+                  mint run swiftgen/swiftgen
+                fi
+        name: SwiftGen
+      - script: |
+                if [ "${CONFIGURATION}" == "Debug" ]; then
+                  mint run realm/swiftlint
+                fi
+        name: SwiftLint
