@@ -9,7 +9,7 @@ tools for rapid project bootstraping.
 
 ## Usage
 
-Make sure that `cookiecutter` and `mint` tools installed with `brew`.
+Make sure that `cookiecutter` and `mint` tools are installed.
 
 ```sh
 brew install cookiecutter mint
