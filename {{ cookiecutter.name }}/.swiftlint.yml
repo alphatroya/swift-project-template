@@ -1,5 +1,10 @@
 excluded:
   - Carthage
+  - {{ cookiecutter.name }}/Classes/UIKit/Extensions/Images.swift
+  - {{ cookiecutter.name }}/Classes/UIKit/Extensions/Strings.swift
+
+disabled_rules:
+  - trailing_comma
 
 opt_in_rules:
   - array_init
