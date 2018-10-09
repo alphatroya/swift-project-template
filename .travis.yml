@@ -1,6 +1,11 @@
 language: objective-c
 osx_image: xcode10
 xcode_sdk: iphoneos11.0
+env:
+  - MINT_PATH=mint
+cache:
+  directories:
+    - $MINT_PATH
 script:
   - brew install cookiecutter mint
   - cookiecutter --no-input .
