@@ -1,5 +1,7 @@
 # My iOS app template
 
+[![Build Status](https://travis-ci.com/alphatroya/swift-project-template.svg?branch=master)](https://travis-ci.com/alphatroya/swift-project-template)
+
 ## Description
 
 This project uses [cookiecutter](https://github.com/audreyr/cookiecutter) and [XcodeGen](https://github.com/yonaskolb/XcodeGen)
