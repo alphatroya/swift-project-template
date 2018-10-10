@@ -1,8 +1,6 @@
 //
-//  AppDelegate.swift
 //  {{ cookiecutter.name }}
-//
-//  Copyright © {% now 'local', '%Y' %} {{ cookiecutter.organization_name }}. All rights reserved.
+//  Copyright © {% now 'local', '%Y' %} {{ cookiecutter.organization }}. All rights reserved.
 //
 
 import UIKit

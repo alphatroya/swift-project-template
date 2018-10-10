@@ -1,6 +1,7 @@
 {
     "name": "Project",
-    "bundle": "org.company.application",
+    "organization": "Organization",
+    "bundle_prefix" : "com.organization",
     "deployment_target": "10.0",
-    "organization_name": "Heads and Hands"
+    "development_team": ""
 }
