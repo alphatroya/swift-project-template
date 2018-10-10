@@ -1,6 +1,6 @@
 name: {{ cookiecutter.name }}
 options:
-  bundleIdPrefix: {{ cookiecutter.bundle }}
+  bundleIdPrefix: {{ cookiecutter.bundle_prefix }}
   deploymentTarget:
     iOS: {{ cookiecutter.deployment_target }}
 configs:
@@ -12,6 +12,7 @@ settings:
     VERSIONING_SYSTEM: apple-generic
     CURRENT_PROJECT_VERSION: 1
     SWIFT_VERSION: 4.2
+    DEVELOPMENT_TEAM: {{ cookiecutter.development_team }}
   configs:
     Debug:
       OTHER_SWIFT_FLAGS: -D DEBUG
@@ -20,7 +21,7 @@ settings:
     Release:
       OTHER_SWIFT_FLAGS: -D RELEASE
 targets:
-  {{ cookiecutter.name }}:
+  {{ cookiecutter.name | lower }}:
     type: application
     platform: iOS
     sources: [{{ cookiecutter.name }}]
@@ -36,3 +37,19 @@ targets:
                   mint run realm/swiftlint
                 fi
         name: SwiftLint
+    attributes:
+      ProvisioningStyle: Manual
+      DevelopmentTeam: {{ cookiecutter.development_team }}
+    settings:
+      configs:
+        Debug:
+          CODE_SIGN_IDENTITY: "iPhone Developer"
+          PROVISIONING_PROFILE_SPECIFIER: match Development {{ cookiecutter.bundle_prefix }}.{{ cookiecutter.name | lower }}
+        Internal:
+          CODE_SIGN_IDENTITY: "iPhone Distribution"
+          CODE_SIGN_IDENTITY[sdk=iphoneos*]: "iPhone Distribution"
+          PROVISIONING_PROFILE_SPECIFIER: match AppStore {{ cookiecutter.bundle_prefix }}.{{ cookiecutter.name | lower }}
+        Release:
+          CODE_SIGN_IDENTITY: "iPhone Distribution"
+          CODE_SIGN_IDENTITY[sdk=iphoneos*]: "iPhone Distribution"
+          PROVISIONING_PROFILE_SPECIFIER: match AppStore {{ cookiecutter.bundle_prefix }}.{{ cookiecutter.name | lower }}
