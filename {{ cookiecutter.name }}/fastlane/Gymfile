@@ -1,0 +1,3 @@
+project "{{ cookiecutter.name }}.xcodeproj"
+scheme "{{ cookiecutter.name | lower }}"
+clean true

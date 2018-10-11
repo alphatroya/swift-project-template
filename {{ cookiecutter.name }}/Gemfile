@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+
+gem 'danger-gitlab'
+gem 'danger-commit_lint'
+gem 'danger-ios_logs'
+gem 'danger-swiftlint'
+gem 'danger-synx', :github => 'alphatroya/danger-synx', :branch => 'no-sort-by-name'
+gem 'danger-xcode_summary'
+gem 'fastlane'
+gem 'synx', :github => 'turekj/synx', :branch => 'v0.3'
+gem 'xcpretty-json-formatter'
+gem 'danger-the_coding_love'
+
+plugins_path = File.join(File.dirname(__FILE__), 'fastlane', 'Pluginfile')
+eval_gemfile(plugins_path) if File.exist?(plugins_path)

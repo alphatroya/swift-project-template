@@ -12,7 +12,7 @@ settings:
     VERSIONING_SYSTEM: apple-generic
     CURRENT_PROJECT_VERSION: 1
     SWIFT_VERSION: 4.2
-    DEVELOPMENT_TEAM: {{ cookiecutter.development_team }}
+    DEVELOPMENT_TEAM: {{ cookiecutter.development_team_id }}
   configs:
     Debug:
       OTHER_SWIFT_FLAGS: -D DEBUG
@@ -43,7 +43,7 @@ targets:
         name: SwiftLint
     attributes:
       ProvisioningStyle: Manual
-      DevelopmentTeam: {{ cookiecutter.development_team }}
+      DevelopmentTeam: {{ cookiecutter.development_team_id }}
     settings:
       configs:
         Debug:
