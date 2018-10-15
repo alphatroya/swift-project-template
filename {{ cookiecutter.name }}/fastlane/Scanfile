@@ -1,0 +1,2 @@
+scheme "{{ cookiecutter.name | lower }}"
+clean true

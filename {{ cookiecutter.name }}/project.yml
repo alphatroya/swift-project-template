@@ -12,7 +12,7 @@ settings:
     VERSIONING_SYSTEM: apple-generic
     CURRENT_PROJECT_VERSION: 1
     SWIFT_VERSION: 4.2
-    DEVELOPMENT_TEAM: {{ cookiecutter.development_team }}
+    DEVELOPMENT_TEAM: {{ cookiecutter.development_team_id }}
   configs:
     Debug:
       OTHER_SWIFT_FLAGS: -D DEBUG
@@ -25,7 +25,9 @@ targets:
     type: application
     platform: iOS
     sources: [{{ cookiecutter.name }}]
-    scheme: {}
+    scheme:
+      testTargets:
+        - {{ cookiecutter.name | lower }}Tests
     prebuildScripts:
       - script: |
                 if [ "${CONFIGURATION}" == "Debug" ]; then
@@ -43,7 +45,7 @@ targets:
         name: SwiftLint
     attributes:
       ProvisioningStyle: Manual
-      DevelopmentTeam: {{ cookiecutter.development_team }}
+      DevelopmentTeam: {{ cookiecutter.development_team_id }}
     settings:
       configs:
         Debug:
@@ -57,3 +59,7 @@ targets:
           CODE_SIGN_IDENTITY: "iPhone Distribution"
           CODE_SIGN_IDENTITY[sdk=iphoneos*]: "iPhone Distribution"
           PROVISIONING_PROFILE_SPECIFIER: match AppStore {{ cookiecutter.bundle_prefix }}.{{ cookiecutter.name | lower }}
+  {{ cookiecutter.name | lower }}Tests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [{{ cookiecutter.name }}Tests]
