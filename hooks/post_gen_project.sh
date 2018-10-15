@@ -12,7 +12,7 @@ echo 'Carthage/Checkouts' >> .gitignore
 echo '.idea' >> .gitignore
 
 mint run "Nonchalant/AppIcon" appicon Icon.png --output-path {{ cookiecutter.name }}/Resources/Assets.xcassets/AppIcon.appiconset
-rm -fr Icon.png
+rm -fr Icon.png project.yml
 
 # Trigger initial commit
 git init
