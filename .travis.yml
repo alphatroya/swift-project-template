@@ -4,8 +4,12 @@ xcode_sdk: iphoneos11.0
 env:
   - MINT_PATH="~/mint_cache"
 cache:
+  bundler: true
   directories:
     - $MINT_PATH
 script:
   - brew install cookiecutter mint
   - cookiecutter --no-input .
+  - cd Project
+  - bundle install
+  - bundle exec fastlane test
