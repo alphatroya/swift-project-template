@@ -6,5 +6,6 @@
     "development_team_name": "",
     "development_team_id": "",
     "apple_id": "",
-    "match_repo_url": ""
+    "match_repo_url": "",
+    "file_header": "//\n//  {{ cookiecutter.name }}\n//  Copyright © {% now 'local', '%Y' %} {{ cookiecutter.organization }}. All rights reserved.\n//"
 }
