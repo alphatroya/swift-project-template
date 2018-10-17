@@ -1,9 +1,4 @@
-//
-//  ProjectConfiguration.swift
-//  {{ cookiecutter.name }}
-//
-//  Copyright © {% now 'local', '%Y' %} {{ cookiecutter.organization }}. All rights reserved.
-//
+{{ cookiecutter.file_header }}
 
 import Foundation
 
