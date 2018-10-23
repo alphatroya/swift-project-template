@@ -1,4 +1,4 @@
-# My new iOS app template
+# My iOS app template
 
 [![Build Status](https://travis-ci.com/alphatroya/swift-project-template.svg?branch=master)](https://travis-ci.com/alphatroya/swift-project-template)
 
