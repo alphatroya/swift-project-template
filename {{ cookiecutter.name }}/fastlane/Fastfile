@@ -8,6 +8,13 @@ build_number = ENV['BITRISE_BUILD_NUMBER']
 
 platform :ios do
 
+  desc 'Create a new application on the developer portal'
+  lane :create do
+    produce
+    match(type: "development")
+    match(type: "appstore")
+  end
+
   desc 'Bootstrap project for development'
   lane :bootstrap do
     sh 'brew install mint carthage libxml2 pre-commit'
