@@ -143,8 +143,6 @@ GEM
       nanaimo (~> 0.2.6)
     xcpretty (0.3.0)
       rouge (~> 2.0.7)
-    xcpretty-json-formatter (0.1.1)
-      xcpretty (~> 0.2, >= 0.0.7)
     xcpretty-travis-formatter (1.0.0)
       xcpretty (~> 0.2, >= 0.0.7)
 
@@ -154,7 +152,6 @@ PLATFORMS
 DEPENDENCIES
   fastlane
   fastlane-plugin-badge
-  xcpretty-json-formatter
 
 BUNDLED WITH
    1.16.0
