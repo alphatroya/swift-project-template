@@ -1,0 +1,2 @@
+swiftlint:
+  config_file: \{\{\ cookiecutter.name\ \}\}/.swiftlint.yml
