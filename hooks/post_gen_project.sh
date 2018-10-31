@@ -27,3 +27,5 @@ git checkout -b develop
 if which pre-commit >/dev/null; then
     pre-commit install
 fi
+
+mint run "carthage/carthage" carthage bootstrap --no-use-binaries --platform iOS --cache-builds
