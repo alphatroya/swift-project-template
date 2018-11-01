@@ -24,7 +24,8 @@ targets:
   {{ cookiecutter.name | lower }}:
     type: application
     platform: iOS
-    sources: [{{ cookiecutter.name }}]
+    sources:
+      - path: {{ cookiecutter.name }}
     dependencies:
       - carthage: ObjcExceptionBridging
       - carthage: XCGLogger
