@@ -29,6 +29,13 @@ targets:
     dependencies:
       - carthage: ObjcExceptionBridging
       - carthage: XCGLogger
+      - carthage: RxCocoa
+      - carthage: RxSwift
+      - carthage: Moya
+      - carthage: RxMoya
+      - carthage: MoyaRequestLogger
+      - carthage: Alamofire
+      - carthage: Result
     scheme:
       testTargets:
         - {{ cookiecutter.name | lower }}Tests
