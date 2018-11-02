@@ -19,6 +19,8 @@ mint run "Nonchalant/AppIcon" appicon Icon.png --output-path {{ cookiecutter.nam
 {% endif %}
 rm -fr Icon.png project.yml
 
+mint run "carthage/carthage" carthage update --no-use-binaries --platform iOS --cache-builds
+
 # Trigger initial commit
 git init
 git add .
@@ -28,5 +30,3 @@ git checkout -b develop
 if which pre-commit >/dev/null; then
     pre-commit install
 fi
-
-mint run "carthage/carthage" carthage bootstrap --no-use-binaries --platform iOS --cache-builds
