@@ -10,6 +10,7 @@ mint run "swiftgen/swiftgen"
 curl 'https://www.gitignore.io/api/swift,macos,fastlane,carthage' > .gitignore
 echo 'Carthage/Checkouts' >> .gitignore
 echo '.idea' >> .gitignore
+echo 'Templates' >> .gitignore
 
 {% if cookiecutter.ipad == "Yes" %}
 mint run "Nonchalant/AppIcon" appicon Icon.png --output-path {{ cookiecutter.name }}/Resources/Assets.xcassets/AppIcon.appiconset --ipad
