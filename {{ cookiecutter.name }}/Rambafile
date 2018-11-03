@@ -1,0 +1,27 @@
+### Headers settings
+company: {{ cookiecutter.organization }}
+
+### Xcode project settings
+project_name: {{ cookiecutter.name }}
+xcodeproj_path: {{ cookiecutter.name }}.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: {{ cookiecutter.name | lower }}
+
+# The file path for new modules
+project_file_path: {{ cookiecutter.name }}/Classes/Modules/
+
+# The Xcode group path to new modules
+project_group_path: {{ cookiecutter.name }}/Classes/Modules/
+
+### Dependencies settings section
+
+cartfile_path: Cartfile
+
+catalogs:
+- 'https://github.com/alphatroya/ATRGenerambaTemplates'
+
+### Templates
+templates:
+- {name: ATR_MVVM_module}
