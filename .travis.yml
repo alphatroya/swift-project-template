@@ -7,9 +7,10 @@ cache:
   bundler: true
   directories:
     - $MINT_PATH
+    - Project/Carthage/Build
 script:
   - brew install cookiecutter mint
-  - cookiecutter --no-input .
+  - cookiecutter --no-input -f .
   - cd Project
   - bundle install
   - bundle exec fastlane test
