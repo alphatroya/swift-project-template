@@ -21,7 +21,7 @@ rm -fr Icon.png project.yml
 
 mint run "carthage/carthage" carthage update --no-use-binaries --platform iOS --cache-builds
 
-mint run "alphatroya/carting" carting update
+mint run "artemnovichkov/carting" carting update
 
 # Trigger initial commit
 git init
