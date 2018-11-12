@@ -3,6 +3,8 @@ options:
   bundleIdPrefix: {{ cookiecutter.bundle_prefix }}
   deploymentTarget:
     iOS: {{ cookiecutter.deployment_target }}
+attributes:
+  ORGANIZATIONNAME: {{ cookiecutter.organization }}
 configs:
   Debug: debug
   Internal: release
