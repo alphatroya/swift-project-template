@@ -3,6 +3,7 @@ options:
   bundleIdPrefix: {{ cookiecutter.bundle_prefix }}
   deploymentTarget:
     iOS: {{ cookiecutter.deployment_target }}
+  developmentLanguage: ru
 attributes:
   ORGANIZATIONNAME: {{ cookiecutter.organization }}
 configs:

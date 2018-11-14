@@ -1,0 +1,3 @@
+{{ cookiecutter.file_header }}
+
+"CFBundleDisplayName" = "{{ cookiecutter.name }}";
