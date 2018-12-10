@@ -38,7 +38,10 @@ platform :ios do
 
   desc 'Deploy a build for beta testing'
   lane :internal do
-    match(type: "appstore")
+    match(
+      type: "appstore",
+      readonly: true
+    )
 
     bootstrap_carthage
 
