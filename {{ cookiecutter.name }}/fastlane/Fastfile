@@ -15,14 +15,6 @@ platform :ios do
     match(type: "appstore")
   end
 
-  desc 'Initial bootstrap project for development'
-  lane :bootstrap do
-    sh 'brew install mint carthage libxml2 pre-commit'
-    bootstrap_carthage
-    sh 'cd .. && mint bootstrap'
-    match(type: "development", readonly: true)
-  end
-
   desc 'Register devices on apple portal'
   lane :register do
     register_devices(
