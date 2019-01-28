@@ -9,8 +9,9 @@ cache:
     - $MINT_PATH
     - Project/Carthage/Build
 script:
-  - brew install cookiecutter mint
+  - brew install cookiecutter mint gpg pwgen
   - cookiecutter --no-input -f .
   - cd Project
+  - gpg --pinentry-mode loopback --passphrase $(pbpaste) ./Project/Resources/Configuration.plist.gpg
   - bundle install
   - bundle exec fastlane test

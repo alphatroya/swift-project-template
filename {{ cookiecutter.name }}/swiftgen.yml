@@ -10,3 +10,8 @@ xcassets:
     outputs:
         templateName: swift4
         output: Images.swift
+plist:
+    inputs: Configuration.plist
+    outputs:
+        templateName: runtime-swift4
+        output: Plist.swift

@@ -2,6 +2,7 @@ excluded:
   - Carthage
   - {{ cookiecutter.name }}/Classes/UIKit/Extensions/Images.swift
   - {{ cookiecutter.name }}/Classes/UIKit/Extensions/Strings.swift
+  - {{ cookiecutter.name }}/Classes/UIKit/Extensions/Plist.swift
 
 disabled_rules:
   - trailing_comma
