@@ -9,7 +9,7 @@ cache:
     - $MINT_PATH
     - Project/Carthage/Build
 script:
-  - brew install cookiecutter mint
+  - brew install cookiecutter mint gpg pwgen
   - cookiecutter --no-input -f .
   - cd Project
   - bundle install
