@@ -26,15 +26,17 @@ rm -fr Icon.png project.yml
 
 mint run "carthage/carthage" carthage update --no-use-binaries --platform iOS --no-build
 
-# Trigger initial commit
 git init
 git add .
-git commit -m "Initial commit"
-git checkout -b develop
 
 if which pre-commit >/dev/null; then
     pre-commit install
+    pre-commit run || echo "Some files was changed by git hook"
 fi
+
+git add .
+git commit -m "Initial commit"
+git checkout -b develop
 
 gpg --pinentry-mode loopback --passphrase $password ./{{ cookiecutter.name }}/Resources/Configuration.plist.gpg
 echo "Configuration password was copied to the clipboard"

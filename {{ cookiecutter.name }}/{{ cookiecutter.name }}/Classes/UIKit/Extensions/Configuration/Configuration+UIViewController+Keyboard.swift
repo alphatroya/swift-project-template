@@ -1,5 +1,3 @@
-{{ cookiecutter.file_header }}
-
 import UIKit
 
 private let kHideKeyboardDelegate = HideKeyboardDelegate()

@@ -1,5 +1,3 @@
-{{ cookiecutter.file_header }}
-
 import Foundation
 import XCGLogger
 

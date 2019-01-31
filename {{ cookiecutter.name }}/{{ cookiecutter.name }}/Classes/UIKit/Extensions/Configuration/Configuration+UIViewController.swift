@@ -1,5 +1,3 @@
-{{ cookiecutter.file_header }}
-
 import UIKit
 
 extension UIViewController: Configurable {}
