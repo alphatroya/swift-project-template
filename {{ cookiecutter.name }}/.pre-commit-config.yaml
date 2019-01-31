@@ -4,3 +4,4 @@ repos:
     hooks:
     -   id: swiftformat
         exclude: (Carthage|{{ cookiecutter.name }}/Classes/Generated)
+        args: [--config, .swiftformat]
