@@ -1,6 +1,5 @@
 name: {{ cookiecutter.name }}
 options:
-  bundleIdPrefix: {{ cookiecutter.bundle_prefix }}
   deploymentTarget:
     iOS: {{ cookiecutter.deployment_target }}
   developmentLanguage: ru
@@ -64,18 +63,19 @@ targets:
 {% else %}
         TARGETED_DEVICE_FAMILY: "1"
 {% endif %}
+        PRODUCT_BUNDLE_IDENTIFIER: {{ cookiecutter.bundle_id }}
       configs:
         Debug:
           CODE_SIGN_IDENTITY: "iPhone Developer"
-          PROVISIONING_PROFILE_SPECIFIER: match Development {{ cookiecutter.bundle_prefix }}.{{ cookiecutter.name | lower }}
+          PROVISIONING_PROFILE_SPECIFIER: match Development {{ cookiecutter.bundle_id }}
         Internal:
           CODE_SIGN_IDENTITY: "iPhone Distribution"
           CODE_SIGN_IDENTITY[sdk=iphoneos*]: "iPhone Distribution"
-          PROVISIONING_PROFILE_SPECIFIER: match AppStore {{ cookiecutter.bundle_prefix }}.{{ cookiecutter.name | lower }}
+          PROVISIONING_PROFILE_SPECIFIER: match AppStore {{ cookiecutter.bundle_id }}
         Release:
           CODE_SIGN_IDENTITY: "iPhone Distribution"
           CODE_SIGN_IDENTITY[sdk=iphoneos*]: "iPhone Distribution"
-          PROVISIONING_PROFILE_SPECIFIER: match AppStore {{ cookiecutter.bundle_prefix }}.{{ cookiecutter.name | lower }}
+          PROVISIONING_PROFILE_SPECIFIER: match AppStore {{ cookiecutter.bundle_id }}
   {{ cookiecutter.name | lower }}Tests:
     type: bundle.unit-test
     platform: iOS
