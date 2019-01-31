@@ -1,5 +1,5 @@
 input_dir: {{ cookiecutter.name }}/Resources/
-output_dir: {{ cookiecutter.name }}/Classes/UIKit/Extensions/
+output_dir: {{ cookiecutter.name }}/Classes/Generated
 strings:
     inputs: ru.lproj/Localizable.strings
     outputs:

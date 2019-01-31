@@ -3,4 +3,4 @@ repos:
     rev: 0.38.0
     hooks:
     -   id: swiftformat
-        exclude: (Carthage|{{ cookiecutter.name }}/Classes/UIKit/Extensions/Images.swift|{{ cookiecutter.name }}/Classes/UIKit/Extensions/Strings.swift)
+        exclude: (Carthage|{{ cookiecutter.name }}/Classes/Generated)
