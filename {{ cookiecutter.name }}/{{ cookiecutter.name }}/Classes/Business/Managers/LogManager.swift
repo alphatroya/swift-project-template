@@ -1,7 +1,7 @@
 import Foundation
 import XCGLogger
 
-// swiftlint:disable:next prefixed_toplevel_constant
+// swiftlint:disable:next prefixed_toplevel_constant closure_body_length
 let log: XCGLogger = {
     let log = XCGLogger(identifier: "XCGLogger", includeDefaultDestinations: false)
 
