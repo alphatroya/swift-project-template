@@ -9,7 +9,7 @@ was encrypted using `gpg` tool. Use secret password from the project administrat
 as bootstrap script parameter.
 
 ```sh
-$./fastlane/bootstrap.sh <your password>.
+$./fastlane/bootstrap.sh <your password>
 ```
 
 ## Template info
