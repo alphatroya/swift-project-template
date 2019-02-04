@@ -4,7 +4,13 @@
 
 ## Bootstrapping development environment
 
-Launch `./fastlane/bootstrap.sh` file.
+Project store sensitive information in separate `Configuration.plist` file. This file
+was encrypted using `gpg` tool. Use secret password from the project administrator
+as bootstrap script parameter.
+
+```sh
+$./fastlane/bootstrap.sh <your password>.
+```
 
 ## Template info
 
