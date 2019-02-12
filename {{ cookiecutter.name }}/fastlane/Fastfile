@@ -5,6 +5,7 @@ fastlane_version '2.0'
 default_platform :ios
 
 build_number = ENV['BITRISE_BUILD_NUMBER']
+deploy_dir = ENV['BITRISE_DEPLOY_DIR']
 
 platform :ios do
 
@@ -25,7 +26,9 @@ platform :ios do
   desc 'Perform test checks'
   lane :test do
     bootstrap_carthage
-    scan
+    scan(
+      output_directory: deploy_dir,
+    )
   end
 
   desc 'Deploy a build for beta testing'
