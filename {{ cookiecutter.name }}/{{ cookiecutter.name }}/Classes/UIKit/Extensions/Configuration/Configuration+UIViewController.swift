@@ -4,18 +4,19 @@ extension UIViewController: Configurable {}
 
 extension Configuration where Base: UIViewController {
     @discardableResult
-    func addAndFitEdges(_ subview: UIView, andBindWith insets: UIEdgeInsets = UIEdgeInsets.zero, fixToTop: Bool = true)
+    func addAndFitSafeArea(_ subview: UIView, andBindWith insets: UIEdgeInsets = UIEdgeInsets.zero)
         -> NSLayoutConstraint {
         subview.translatesAutoresizingMaskIntoConstraints = false
         base.view.addSubview(subview)
 
-        let topConstraint = fixToTop ?
-            subview.topAnchor.constraint(equalTo: topEdgeAnchor, constant: insets.top) :
-            subview.topAnchor.constraint(greaterThanOrEqualTo: topEdgeAnchor, constant: insets.top)
+        let topConstraint = subview.topAnchor.constraint(equalTo: topEdgeAnchor, constant: insets.top)
+
         let bottomConstraint = subview.bottomAnchor.constraint(equalTo: bottomEdgeAnchor, constant: -insets.bottom)
         bottomConstraint.priority = UILayoutPriority(rawValue: 999)
+
         let rightConstraint = subview.rightAnchor.constraint(equalTo: base.view.rightAnchor, constant: -insets.right)
         rightConstraint.priority = UILayoutPriority(rawValue: 999)
+
         NSLayoutConstraint.activate([
             topConstraint,
             bottomConstraint,
