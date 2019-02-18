@@ -15,3 +15,10 @@ plist:
     outputs:
         templateName: runtime-swift4
         output: Plist.swift
+ib:
+    inputs: Storyboards
+    outputs:
+        - templateName: scenes-swift4
+          output: StoryboardScenes.swift
+        - templateName: segues-swift4
+          output: StoryboardSegues.swift
