@@ -74,3 +74,5 @@ identifier_name:
     error: 32
 cyclomatic_complexity:
   error: 30
+deployment_target:
+  iOS_deployment_target: {{ cookiecutter.deployment_target }}
