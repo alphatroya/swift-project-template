@@ -79,4 +79,8 @@ targets:
   {{ cookiecutter.name | lower }}Tests:
     type: bundle.unit-test
     platform: iOS
-    sources: [{{ cookiecutter.name }}Tests]
+    sources:
+      - {{ cookiecutter.name }}
+      - {{ cookiecutter.name }}Tests
+    dependencies:
+      - target: {{ cookiecutter.name | lower }}
