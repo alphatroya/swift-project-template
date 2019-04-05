@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode10
+osx_image: xcode10.2
 xcode_sdk: iphoneos11.0
 env:
   - MINT_PATH="~/mint_cache"
@@ -9,7 +9,9 @@ cache:
     - $MINT_PATH
     - Project/Carthage/Build
 script:
-  - brew install cookiecutter mint gpg pwgen
+  - brew install cookiecutter mint gpg pwgen libxml2
+  - brew update
+  - brew upgrade mint
   - cookiecutter --no-input -f .
   - cd Project
   - bundle install

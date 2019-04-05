@@ -13,15 +13,17 @@ settings:
   base:
     VERSIONING_SYSTEM: apple-generic
     CURRENT_PROJECT_VERSION: 1
-    SWIFT_VERSION: 4.2
+    SWIFT_VERSION: 5.0
     DEVELOPMENT_TEAM: {{ cookiecutter.development_team_id }}
   configs:
     Debug:
       OTHER_SWIFT_FLAGS: -D DEBUG
     Internal:
       OTHER_SWIFT_FLAGS: -D INTERNAL
+      SWIFT_COMPILATION_MODE: wholemodule
     Release:
       OTHER_SWIFT_FLAGS: -D RELEASE
+      SWIFT_COMPILATION_MODE: wholemodule
 targets:
   {{ cookiecutter.name | lower }}:
     type: application
@@ -31,10 +33,6 @@ targets:
     dependencies:
       - carthage: ObjcExceptionBridging
       - carthage: XCGLogger
-      - carthage: Moya
-      - carthage: MoyaRequestLogger
-      - carthage: Alamofire
-      - carthage: Result
     scheme:
       testTargets:
         - {{ cookiecutter.name | lower }}Tests
@@ -79,4 +77,8 @@ targets:
   {{ cookiecutter.name | lower }}Tests:
     type: bundle.unit-test
     platform: iOS
-    sources: [{{ cookiecutter.name }}Tests]
+    sources:
+      - {{ cookiecutter.name }}
+      - {{ cookiecutter.name }}Tests
+    dependencies:
+      - target: {{ cookiecutter.name | lower }}

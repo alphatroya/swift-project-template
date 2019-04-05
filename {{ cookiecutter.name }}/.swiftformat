@@ -1,2 +1,2 @@
---swiftversion 4.2
+--swiftversion 5.0
 --header "\n{{ cookiecutter.name }}\nCopyright © {year} {{ cookiecutter.organization }}. All rights reserved.\n//"
