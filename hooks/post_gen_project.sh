@@ -13,6 +13,9 @@ echo '.idea' >> .gitignore
 echo 'Templates' >> .gitignore
 echo '{{ cookiecutter.name }}/Resources/Configuration.plist' >> .gitignore
 
+if ! [ -x "$(command -v pwgen)" ]; then
+    brew install pwgen
+fi
 password=$(pwgen -s 25 1)
 gpg -c --pinentry-mode loopback --passphrase $password ./{{ cookiecutter.name }}/Resources/Configuration.plist
 rm -fr ./{{ cookiecutter.name }}/Resources/Configuration.plist
