@@ -21,6 +21,10 @@ platform :ios do
     register_devices(
       devices_file: "./fastlane/devices.txt"
     )
+    match(
+      type: "development",
+      force_for_new_devices: true
+    )
   end
 
   desc 'Perform test checks'
