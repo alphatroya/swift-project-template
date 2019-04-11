@@ -61,7 +61,6 @@ platform :ios do
       distribute_external: true,
       beta_app_feedback_email: '{{ cookiecutter.apple_id }}',
       beta_app_description: 'Beta build for testing',
-      wait_for_uploaded_build: true,
       changelog: 'Fixes and improvements',
       groups: 'Beta',
     )
