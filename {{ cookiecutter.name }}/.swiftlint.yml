@@ -24,6 +24,7 @@ opt_in_rules:
   - fallthrough
   - fatal_error_message
   - file_name
+  - file_types_order
   - first_where
   - force_unwrapping
   - identical_operands
@@ -45,6 +46,7 @@ opt_in_rules:
   - quick_discouraged_call
   - quick_discouraged_focused_test
   - quick_discouraged_pending_test
+  - reduce_into
   - redundant_nil_coalescing
   - redundant_objc_attribute
   - required_enum_case
@@ -55,6 +57,7 @@ opt_in_rules:
   - strict_fileprivate
   - switch_case_on_newline
   - toggle_bool
+  - type_contents_order
   - unneeded_parentheses_in_closure_argument
   - untyped_error_in_catch
   - vertical_parameter_alignment_on_call

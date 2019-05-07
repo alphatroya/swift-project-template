@@ -1,7 +1,5 @@
 import UIKit
 
-extension UIView: Configurable {}
-
 extension Configuration where Base: UIView {
     func prepareForAutoLayout() -> Base {
         base.translatesAutoresizingMaskIntoConstraints = false
@@ -34,3 +32,6 @@ extension Configuration where Base: UIView {
         ])
     }
 }
+
+extension UIView: Configurable {}
+

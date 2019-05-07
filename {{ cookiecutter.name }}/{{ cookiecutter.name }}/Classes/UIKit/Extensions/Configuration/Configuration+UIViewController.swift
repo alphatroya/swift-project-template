@@ -1,8 +1,22 @@
 import UIKit
 
-extension UIViewController: Configurable {}
-
 extension Configuration where Base: UIViewController {
+    private var topEdgeAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return base.view.safeAreaLayoutGuide.topAnchor
+        } else {
+            return base.topLayoutGuide.bottomAnchor
+        }
+    }
+
+    private var bottomEdgeAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return base.view.safeAreaLayoutGuide.bottomAnchor
+        } else {
+            return base.bottomLayoutGuide.topAnchor
+        }
+    }
+
     @discardableResult
     func addAndFitSafeArea(_ subview: UIView, andBindWith insets: UIEdgeInsets = UIEdgeInsets.zero)
         -> NSLayoutConstraint {
@@ -25,20 +39,6 @@ extension Configuration where Base: UIViewController {
         ])
         return bottomConstraint
     }
-
-    private var topEdgeAnchor: NSLayoutYAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return base.view.safeAreaLayoutGuide.topAnchor
-        } else {
-            return base.topLayoutGuide.bottomAnchor
-        }
-    }
-
-    private var bottomEdgeAnchor: NSLayoutYAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return base.view.safeAreaLayoutGuide.bottomAnchor
-        } else {
-            return base.bottomLayoutGuide.topAnchor
-        }
-    }
 }
+
+extension UIViewController: Configurable {}

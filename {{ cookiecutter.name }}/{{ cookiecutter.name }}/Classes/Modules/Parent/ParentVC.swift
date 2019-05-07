@@ -1,6 +1,22 @@
 import UIKit
 
 class ParentVC: UIViewController {
+    private class ParentPopGestureRecognizerDelegate: NSObject, UIGestureRecognizerDelegate {
+        @objc
+        func gestureRecognizer(
+            _: UIGestureRecognizer,
+            shouldRecognizeSimultaneouslyWith _: UIGestureRecognizer
+        ) -> Bool {
+            return true
+        }
+    }
+
+    private let gestureHandler = ParentPopGestureRecognizerDelegate()
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+
     deinit {
         log.verbose("\(String(describing: type(of: self))) released 🙌")
     }
@@ -19,37 +35,7 @@ class ParentVC: UIViewController {
             gestureRecognizer.isEnabled = navigationController.viewControllers.count > 1
         }
     }
-
-    private let gestureHandler = ParentPopGestureRecognizerDelegate()
-
-    private class ParentPopGestureRecognizerDelegate: NSObject, UIGestureRecognizerDelegate {
-        @objc
-        func gestureRecognizer(
-            _: UIGestureRecognizer,
-            shouldRecognizeSimultaneouslyWith _: UIGestureRecognizer
-        ) -> Bool {
-            return true
-        }
-    }
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
-    }
 }
 
 extension ParentVC: NavigationStatusBarConfigurator {}
 
-protocol NavigationStatusBarConfigurator {
-    func configureStatusBar()
-}
-
-extension NavigationStatusBarConfigurator where Self: UIViewController {
-    func configureStatusBar() {
-        switch preferredStatusBarStyle {
-        case .lightContent:
-            navigationController?.navigationBar.barStyle = .black
-        default:
-            navigationController?.navigationBar.barStyle = .default
-        }
-    }
-}
