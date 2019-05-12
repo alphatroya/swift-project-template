@@ -18,7 +18,7 @@ class ParentVC: UIViewController {
     }
 
     deinit {
-        log.verbose("\(String(describing: type(of: self))) released 🙌")
+        log.verbose("%{public}@ released 🙌", String(describing: type(of: self)))
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -38,4 +38,3 @@ class ParentVC: UIViewController {
 }
 
 extension ParentVC: NavigationStatusBarConfigurator {}
-
