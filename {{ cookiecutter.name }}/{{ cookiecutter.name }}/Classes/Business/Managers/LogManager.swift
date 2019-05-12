@@ -1,48 +1,41 @@
 import Foundation
-import XCGLogger
+import os.log
 
-// swiftlint:disable:next prefixed_toplevel_constant closure_body_length
-let log: XCGLogger = {
-    let log = XCGLogger(identifier: "XCGLogger", includeDefaultDestinations: false)
-
-    let systemLogDestination = ConsoleDestination(owner: log, identifier: "XCGLogger.console")
-
-    switch ProjectConfiguration.current {
-    case .debug, .internal:
-        systemLogDestination.outputLevel = .verbose
-    case .release:
-        systemLogDestination.outputLevel = .severe
+final class LogManager {
+    func verbose(_ string: StaticString, logger: OSLog = .general, _ args: CVarArg...) {
+        log(string, level: .debug, logger: logger, args)
     }
 
-    systemLogDestination.showLogIdentifier = false
-    systemLogDestination.showFunctionName = false
-    systemLogDestination.showThreadName = false
-    systemLogDestination.showLevel = true
-    systemLogDestination.showFileName = true
-    systemLogDestination.showLineNumber = true
-    systemLogDestination.showDate = true
-    systemLogDestination.levelDescriptions = [
-        .info: "INFO",
-        .verbose: "VERBOSE",
-        .warning: "WARNING",
-        .error: "ERROR",
-        .debug: "DEBUG",
-    ]
+    func debug(_ string: StaticString, logger: OSLog = .general, _ args: CVarArg...) {
+        log(string, level: .info, logger: logger, args)
+    }
 
-    log.add(destination: systemLogDestination)
+    func error(_ string: StaticString, logger: OSLog = .general, _ args: CVarArg...) {
+        log(string, level: .error, logger: logger, args)
+    }
 
-    let ansiColorLogFormatter = ANSIColorLogFormatter()
-    ansiColorLogFormatter.colorize(level: .verbose, with: .cyan)
-    ansiColorLogFormatter.colorize(level: .debug, with: .blue, options: [.bold])
-    ansiColorLogFormatter.colorize(level: .warning, with: .yellow)
-    ansiColorLogFormatter.colorize(level: .error, with: .red, options: [.bold])
-    systemLogDestination.formatters = [ansiColorLogFormatter]
+    private func log(_ string: StaticString, level: OSLogType, logger: OSLog, _ args: CVarArg...) {
+        switch args.count {
+        case 0:
+            os_log(string, log: logger, type: level)
+        case 1:
+            os_log(string, log: logger, type: level, args[0])
+        case 2:
+            os_log(string, log: logger, type: level, args[0], args[1])
+        case 3:
+            os_log(string, log: logger, type: level, args[0], args[1], args[2])
+        default:
+            os_log(string, log: logger, type: level, args)
+        }
+    }
+}
 
-    let dateFormatter = DateFormatter()
-    dateFormatter.locale = NSLocale.current
-    dateFormatter.dateStyle = .none
-    dateFormatter.timeStyle = .medium
-    log.dateFormatter = dateFormatter
+extension OSLog {
+    private static let subsystem = Bundle.main.bundleIdentifier
+    static let general = OSLog(subsystem: subsystem ?? "", category: "general")
+    static let ui = OSLog(subsystem: subsystem ?? "", category: "ui")
+    static let network = OSLog(subsystem: subsystem ?? "", category: "network")
+}
 
-    return log
-}()
+// swiftlint:disable:next prefixed_toplevel_constant
+let log = LogManager()
