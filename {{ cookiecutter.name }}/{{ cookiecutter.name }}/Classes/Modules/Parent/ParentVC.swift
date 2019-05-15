@@ -18,7 +18,7 @@ class ParentVC: UIViewController {
     }
 
     deinit {
-        log.verbose("%{public}@ released 🙌", String(describing: type(of: self)))
+        log.debug("%{public}@ released 🙌", String(describing: type(of: self)))
     }
 
     override func viewWillAppear(_ animated: Bool) {
