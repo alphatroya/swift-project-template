@@ -20,5 +20,7 @@ ib:
     outputs:
         - templateName: scenes-swift4
           output: StoryboardScenes.swift
+          params:
+            ignoreTargetModule: true
         - templateName: segues-swift4
           output: StoryboardSegues.swift
