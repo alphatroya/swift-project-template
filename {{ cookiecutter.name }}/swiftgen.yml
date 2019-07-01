@@ -9,7 +9,7 @@ xcassets:
     inputs: Assets.xcassets
     outputs:
         templateName: swift4
-        output: Images.swift
+        output: Assets.swift
 plist:
     inputs: Configuration.plist
     outputs:
