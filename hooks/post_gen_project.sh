@@ -11,14 +11,6 @@ curl 'https://www.gitignore.io/api/swift,macos,fastlane,carthage' > .gitignore
 echo 'Carthage/Checkouts' >> .gitignore
 echo '.idea' >> .gitignore
 echo 'Templates' >> .gitignore
-echo '{{ cookiecutter.name }}/Resources/Configuration.plist' >> .gitignore
-
-if ! [ -x "$(command -v pwgen)" ]; then
-    brew install pwgen
-fi
-password=$(pwgen -s 25 1)
-gpg -c --pinentry-mode loopback --passphrase $password ./{{ cookiecutter.name }}/Resources/Configuration.plist
-rm -fr ./{{ cookiecutter.name }}/Resources/Configuration.plist
 
 {% if cookiecutter.ipad == "Yes" %}
 mint run "Nonchalant/AppIcon" appicon Icon.png --output-path {{ cookiecutter.name }}/Resources/Assets.xcassets/AppIcon.appiconset --ipad
@@ -40,7 +32,3 @@ fi
 git add .
 git commit -m "Initial commit"
 git checkout -b develop
-
-gpg --pinentry-mode loopback --passphrase $password ./{{ cookiecutter.name }}/Resources/Configuration.plist.gpg
-echo "Configuration password was copied to the clipboard"
-echo $password | pbcopy

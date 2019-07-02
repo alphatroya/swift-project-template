@@ -11,7 +11,7 @@ xcassets:
         templateName: swift4
         output: Assets.swift
 plist:
-    inputs: Configuration.plist
+    inputs: Info.plist
     outputs:
         templateName: runtime-swift4
         output: Plist.swift
