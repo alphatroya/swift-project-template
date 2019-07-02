@@ -3,12 +3,17 @@ options:
   deploymentTarget:
     iOS: {{ cookiecutter.deployment_target }}
   developmentLanguage: ru
+  createIntermediateGroups: true
 attributes:
   ORGANIZATIONNAME: {{ cookiecutter.organization }}
 configs:
   Debug: debug
   Internal: release
   Release: release
+configFiles:
+  Debug: ./{{ cookiecutter.name }}/Resources/Configuration/Debug.xcconfig
+  Internal: ./{{ cookiecutter.name }}/Resources/Configuration/Internal.xcconfig
+  Release: ./{{ cookiecutter.name }}/Resources/Configuration/Release.xcconfig
 settings:
   base:
     VERSIONING_SYSTEM: apple-generic
