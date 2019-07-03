@@ -12,6 +12,8 @@ private class HideKeyboardDelegate: NSObject, UIGestureRecognizerDelegate {
     }
 }
 
+extension UIViewController: Configurable {}
+
 extension Configuration where Base: UIViewController {
     func addTapToHideKeyboardGesture() {
         let tapGesture = UITapGestureRecognizer(target: base.view, action: #selector(base.view.endEditing))
