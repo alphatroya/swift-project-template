@@ -24,3 +24,8 @@ ib:
             ignoreTargetModule: true
         - templateName: segues-swift4
           output: StoryboardSegues.swift
+fonts:
+    inputs: Fonts
+    outputs:
+        templateName: swift4
+        output: Fonts.swift
