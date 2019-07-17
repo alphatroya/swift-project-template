@@ -23,4 +23,4 @@ and [this](https://github.com/alphatroya/swift-project-template) swift template.
 
 ## Copyright
 
-{{ cookiecutter.organization }}©
+{{ cookiecutter.organization }} ©
