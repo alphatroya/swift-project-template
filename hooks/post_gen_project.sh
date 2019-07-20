@@ -29,6 +29,8 @@ if which pre-commit >/dev/null; then
     pre-commit run || echo "Some files was changed by git hook"
 fi
 
+bundle install
+
 git add .
 git commit -m "Initial commit"
 git checkout -b develop
