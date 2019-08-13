@@ -4,7 +4,7 @@
 
 ## Bootstrapping development environment
 ```sh
-$./fastlane/bootstrap.sh
+make bootstrap
 ```
 
 ## Bitrise CI configuration
