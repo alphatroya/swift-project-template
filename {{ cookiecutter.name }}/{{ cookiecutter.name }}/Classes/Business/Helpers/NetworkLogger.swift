@@ -16,8 +16,8 @@ enum NetworkLogger {
     }
 
     static func logResponse(_ data: Data?) {
-        guard let data = data,
-            let string = String(data: data, encoding: .utf8) else {
+        guard let string = data.flatMap({ String(data: $0, encoding: .utf8) }) else {
+            log.debug("**RESPONSE** =>> [EMPTY BODY]", logger: .network)
             return
         }
         logMessageBlock {
