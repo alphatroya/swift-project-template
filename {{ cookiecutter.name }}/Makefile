@@ -1,11 +1,10 @@
 BREW := /usr/local/bin/brew
-MINT := /usr/local/bin/mint
-CARTHAGE := /usr/local/bin/carthage
-PRE_COMMIT := /usr/local/bin/pre-commit
 PRE_COMMIT_HOOK := .git/hooks/pre-commit
 
-bootstrap: $(MINT) $(CARTHAGE) $(PRE_COMMIT_HOOK) install_certs
+bootstrap: $(PRE_COMMIT_HOOK) install_certs brew_bundle bootstrap_dependencies
 	mint bootstrap
+
+bootstrap_dependencies:
 	mint run carthage/carthage carthage bootstrap --cache-builds --platform ios --no-use-binaries
 
 install_certs: bootstrap_gems
@@ -17,26 +16,19 @@ test: bootstrap_gems
 bootstrap_gems:
 	bundle install
 
-fmt: $(MINT)
+brew_bundle: $(BREW)
+	brew bundle check || brew bundle
+
+fmt: brew_bundle
 	mint run swiftformat swiftformat {{ cookiecutter.name }}
 
-lint: $(MINT)
+lint: brew_bundle
 	mint run swiftlint
 
-$(PRE_COMMIT_HOOK): $(PRE_COMMIT)
+$(PRE_COMMIT_HOOK): brew_bundle
 	pre-commit install
-
-$(PRE_COMMIT): $(BREW)
-	brew install pre-commit
-
-$(MINT): $(BREW)
-	brew install mint libxml2
-
-$(CARTHAGE): $(BREW)
-	brew install carthage
 
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
-.PHONY: bootstrap test bootstrap_gems install_certs lint fmt
-
+.PHONY: bootstrap test bootstrap_gems install_certs lint fmt brew_bundle bootstrap_dependencies
