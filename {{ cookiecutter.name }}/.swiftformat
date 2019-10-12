@@ -1,3 +1,3 @@
---swiftversion 5.0
+--swiftversion 5.1
 --header "\n{{ cookiecutter.name }}\nCopyright © {year} {{ cookiecutter.organization }}. All rights reserved.\n//"
 --exclude {{ cookiecutter.name }}/Classes/Generated

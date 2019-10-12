@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/nicklockwood/SwiftFormat
-    rev: 0.40.11
+    rev: 0.40.13
     hooks:
     -   id: swiftformat
         exclude: (Carthage|{{ cookiecutter.name }}/Classes/Generated)
