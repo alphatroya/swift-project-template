@@ -17,14 +17,15 @@ workflows:
     - activate-ssh-key:
         {% raw %}run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'{%- endraw %}
     - git-clone: {}
-    - cache-pull@2.0.1: {}
-    - fastlane@2.3.12:
+    - cache-pull: {}
+    - bitrise-step-install-bundler: {}
+    - fastlane:
         inputs:
         - lane: "$FASTLANE_LANE"
         - update_fastlane: 'false'
         - work_dir: "./"
     - deploy-to-bitrise-io: {}
-    - cache-push@2.0.5:
+    - cache-push:
         inputs:
         - cache_paths: "./Carthage/Build"
         is_always_run: true
@@ -33,8 +34,9 @@ workflows:
     - activate-ssh-key:
         {% raw %}run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'{%- endraw %}
     - git-clone: {}
-    - cache-pull@2.0.1: {}
-    - fastlane@2.3.12:
+    - cache-pull: {}
+    - bitrise-step-install-bundler: {}
+    - fastlane:
         inputs:
         - lane: "$FASTLANE_LANE"
         - update_fastlane: 'false'
@@ -51,8 +53,8 @@ workflows:
     - activate-ssh-key:
         {% raw %}run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'{%- endraw %}
     - git-clone: {}
-    - cache-pull@2.0.1: {}
-    - script@1.1.5:
+    - cache-pull: {}
+    - script:
         inputs:
         - content: |
             #!/usr/bin/env bash
@@ -64,7 +66,7 @@ workflows:
             carthage bootstrap --no-use-binaries --platform iOS --cache-builds
         title: Build Carthage
     - deploy-to-bitrise-io: {}
-    - cache-push@2.0.5:
+    - cache-push:
         inputs:
         - cache_paths: "./Carthage/Build"
         is_always_run: true
@@ -73,14 +75,15 @@ workflows:
     - activate-ssh-key:
         {% raw %}run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'{%- endraw %}
     - git-clone: {}
-    - cache-pull@2.0.1: {}
-    - fastlane@2.3.12:
+    - cache-pull: {}
+    - bitrise-step-install-bundler: {}
+    - fastlane:
         inputs:
         - lane: "$FASTLANE_LANE"
         - update_fastlane: 'false'
         - work_dir: "./"
     - deploy-to-bitrise-io: {}
-    - cache-push@2.0.5:
+    - cache-push:
         inputs:
         - cache_paths: "./Carthage/Build"
         is_always_run: true
@@ -92,3 +95,6 @@ trigger_map:
 - pull_request_source_branch: feature/*
   workflow: test
   pull_request_target_branch: develop
+meta:
+  bitrise.io:
+    machine_type: performance
