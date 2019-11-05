@@ -11,6 +11,9 @@ app:
   - opts:
       is_expand: false
     FASTLANE_LANE: ios internal
+  - opts:
+      is_expand: false
+    FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: '30'
 workflows:
   internal:
     steps:
