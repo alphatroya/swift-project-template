@@ -1,13 +1,13 @@
 BREW := /usr/local/bin/brew
 PRE_COMMIT_HOOK := .git/hooks/pre-commit
 
-bootstrap: $(PRE_COMMIT_HOOK) install_certs brew_bundle bootstrap_dependencies
+bootstrap: $(PRE_COMMIT_HOOK) certs brew_bundle bootstrap_dependencies
 	mint bootstrap
 
 bootstrap_dependencies:
 	mint run carthage/carthage carthage bootstrap --cache-builds --platform ios --no-use-binaries
 
-install_certs: bootstrap_gems
+certs: bootstrap_gems
 	bundle exec fastlane match development --readonly
 
 test: bootstrap_gems
@@ -25,10 +25,16 @@ fmt: brew_bundle
 lint: brew_bundle
 	mint run swiftlint
 
+carting:
+	mint run carting carting update
+
+swiftgen:
+	mint run swiftgen
+
 $(PRE_COMMIT_HOOK): brew_bundle
 	pre-commit install
 
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
-.PHONY: bootstrap test bootstrap_gems install_certs lint fmt brew_bundle bootstrap_dependencies
+.PHONY: bootstrap test bootstrap_gems certs carting lint fmt brew_bundle bootstrap_dependencies swiftlint
