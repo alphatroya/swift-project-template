@@ -1,3 +1,6 @@
 --swiftversion 5.1
---header "\n{{ cookiecutter.name }}\nCopyright © {year} {{ cookiecutter.organization }}. All rights reserved.\n//"
+--header "\n{{ cookiecutter.name }}\nCopyright © {created.year} {{ cookiecutter.organization }}. All rights reserved.\n//"
 --exclude {{ cookiecutter.name }}/Classes/Generated
+--maxwidth 140
+--wraparguments before-first
+--wrapcollections before-first
