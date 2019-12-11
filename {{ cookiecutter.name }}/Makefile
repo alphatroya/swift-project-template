@@ -49,7 +49,7 @@ $(PRE_COMMIT_HOOK): homebrew
 ## help: Prints help message
 help:
 	@echo "Usage: \n"
-	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column
+	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /'
 
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
