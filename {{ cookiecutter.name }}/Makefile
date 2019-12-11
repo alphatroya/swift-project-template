@@ -29,7 +29,7 @@ homebrew: $(BREW)
 
 ## fmt: Launch swift files code formatter
 fmt:
-	mint run swiftformat swiftformat {{ cookiecutter.name }}
+	mint run swiftformat swiftformat {{ cookiecutter.name }} {{ cookiecutter.name }}Tests
 
 ## lint: Launch swift files linter check
 lint:
