@@ -33,7 +33,7 @@ fmt:
 
 ## lint: Launch swift files linter check
 lint:
-	swift run -c release swiftlint
+	mint run swiftlint
 
 ## carting: Update "Carthage" project Build Phase to include all Carthage dependencies
 carting:
