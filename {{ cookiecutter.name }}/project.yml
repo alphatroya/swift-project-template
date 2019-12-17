@@ -3,6 +3,7 @@ options:
   deploymentTarget:
     iOS: {{ cookiecutter.deployment_target }}
   developmentLanguage: ru
+  knownRegions: ["ru", "Base"]
   createIntermediateGroups: true
 attributes:
   ORGANIZATIONNAME: {{ cookiecutter.organization }}
