@@ -9,7 +9,7 @@ bootstrap: $(PRE_COMMIT_HOOK) certs deps homebrew
 
 ## deps: Bootstrap swift dependencies
 deps:
-	mint run carthage/carthage carthage bootstrap --cache-builds --platform ios --no-use-binaries
+	mint run carthage/carthage carthage bootstrap --cache-builds --platform ios
 
 ## certs: Download Apple certificates for development
 certs: gems
