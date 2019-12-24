@@ -14,7 +14,11 @@ class ParentVC: UIViewController {
     private let gestureHandler = ParentPopGestureRecognizerDelegate()
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
+        if #available(iOS 13.0, *) {
+            return .darkContent
+        } else {
+            return .default
+        }
     }
 
     deinit {
