@@ -54,7 +54,7 @@ platform :ios do
 
     gym(
       export_method: 'app-store',
-      configuration: 'Internal'
+      configuration: 'Release'
     )
 
     pilot(
@@ -65,10 +65,6 @@ platform :ios do
       groups: 'Beta',
     )
 
-  end
-
-  desc 'Deploy a build for the external beta testing'
-  lane :external do
   end
 
   desc 'Deploy a release build'

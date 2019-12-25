@@ -33,7 +33,7 @@ enum NetworkLogger {
 
     private static func logMessageBlock(_ logClosure: () -> Void) {
         switch ProjectConfiguration.current {
-        case .debug, .internal:
+        case .debug:
             logClosure()
         case .release:
             break
