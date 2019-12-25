@@ -9,11 +9,9 @@ attributes:
   ORGANIZATIONNAME: {{ cookiecutter.organization }}
 configs:
   Debug: debug
-  Internal: release
   Release: release
 configFiles:
   Debug: ./{{ cookiecutter.name }}/Resources/Configuration/Debug.xcconfig
-  Internal: ./{{ cookiecutter.name }}/Resources/Configuration/Internal.xcconfig
   Release: ./{{ cookiecutter.name }}/Resources/Configuration/Release.xcconfig
 settings:
   base:
@@ -24,9 +22,6 @@ settings:
   configs:
     Debug:
       OTHER_SWIFT_FLAGS: -D DEBUG
-    Internal:
-      OTHER_SWIFT_FLAGS: -D INTERNAL
-      SWIFT_COMPILATION_MODE: wholemodule
     Release:
       OTHER_SWIFT_FLAGS: -D RELEASE
       SWIFT_COMPILATION_MODE: wholemodule
@@ -73,10 +68,6 @@ targets:
         Debug:
           CODE_SIGN_IDENTITY: "iPhone Developer"
           PROVISIONING_PROFILE_SPECIFIER: match Development {{ cookiecutter.bundle_id }}
-        Internal:
-          CODE_SIGN_IDENTITY: "iPhone Distribution"
-          CODE_SIGN_IDENTITY[sdk=iphoneos*]: "iPhone Distribution"
-          PROVISIONING_PROFILE_SPECIFIER: match AppStore {{ cookiecutter.bundle_id }}
         Release:
           CODE_SIGN_IDENTITY: "iPhone Distribution"
           CODE_SIGN_IDENTITY[sdk=iphoneos*]: "iPhone Distribution"
