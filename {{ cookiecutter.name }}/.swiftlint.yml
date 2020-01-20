@@ -24,6 +24,7 @@ opt_in_rules:
   - empty_count
   - empty_string
   - empty_xctest_method
+  - enum_case_associated_values_count
   - explicit_init
   - fallthrough
   - fatal_error_message
@@ -34,6 +35,7 @@ opt_in_rules:
   - force_unwrapping
   - identical_operands
   - implicit_return
+  - indentation_width
   - inert_defer
   - joined_default_parameter
   - legacy_multiple
@@ -44,9 +46,12 @@ opt_in_rules:
   - multiline_parameters_brackets
   - no_space_in_method_call
   - operator_usage_whitespace
+  - optional_enum_case_matching
+  - orphaned_doc_comment
   - overridden_super_call
   - override_in_extension
   - pattern_matching_keywords
+  - prefer_self_type_over_type_of_self
   - prefixed_toplevel_constant
   - private_action
   - prohibited_super_call
