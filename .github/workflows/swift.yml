@@ -1,0 +1,26 @@
+name: Swift
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    env:
+      MINT_PATH: "~/mint_cache"
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Cache Mint
+      id: cache-mint
+      uses: actions/cache@v1
+      with:
+        path: ~/mint_cache
+        key: cache
+
+    - name: Test
+      run: |
+        brew install cookiecutter mint libxml2
+        cookiecutter --no-input -f .
+        cd Project
+        make test
