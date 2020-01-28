@@ -45,12 +45,16 @@ swiftgen:
 
 ## icon: Update application icon from the Icon.png file
 icon:
+ifneq ("$(wildcard ./Icon.png)","")
 {% if cookiecutter.ipad == "Yes" %}
 	mint run "Nonchalant/AppIcon" appicon Icon.png --output-path {{ cookiecutter.name }}/Resources/Assets.xcassets/AppIcon.appiconset --ipad
 {% else %}
 	mint run "Nonchalant/AppIcon" appicon Icon.png --output-path {{ cookiecutter.name }}/Resources/Assets.xcassets/AppIcon.appiconset
 {% endif %}
 	rm -fr Icon.png
+else
+	echo 'File "Icon.png" is not exits in the project root directory'
+endif
 
 $(PRE_COMMIT_HOOK): homebrew
 	pre-commit install
