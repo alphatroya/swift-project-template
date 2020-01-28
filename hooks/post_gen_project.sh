@@ -12,12 +12,8 @@ echo 'Carthage/Checkouts' >> .gitignore
 echo '.idea' >> .gitignore
 echo 'Templates' >> .gitignore
 
-{% if cookiecutter.ipad == "Yes" %}
-mint run "Nonchalant/AppIcon" appicon Icon.png --output-path {{ cookiecutter.name }}/Resources/Assets.xcassets/AppIcon.appiconset --ipad
-{% else %}
-mint run "Nonchalant/AppIcon" appicon Icon.png --output-path {{ cookiecutter.name }}/Resources/Assets.xcassets/AppIcon.appiconset
-{% endif %}
-rm -fr Icon.png project.yml
+make icon
+rm -fr project.yml
 
 mint run "carthage/carthage" carthage update --no-use-binaries --platform iOS --no-build
 

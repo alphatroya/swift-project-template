@@ -43,6 +43,19 @@ carting:
 swiftgen:
 	mint run swiftgen
 
+## icon: Update application icon from the Icon.png file
+icon:
+ifneq ("$(wildcard ./Icon.png)","")
+{% if cookiecutter.ipad == "Yes" %}
+	mint run "Nonchalant/AppIcon" appicon Icon.png --output-path {{ cookiecutter.name }}/Resources/Assets.xcassets/AppIcon.appiconset --ipad
+{% else %}
+	mint run "Nonchalant/AppIcon" appicon Icon.png --output-path {{ cookiecutter.name }}/Resources/Assets.xcassets/AppIcon.appiconset
+{% endif %}
+	rm -fr Icon.png
+else
+	echo 'File "Icon.png" is not exits in the project root directory'
+endif
+
 $(PRE_COMMIT_HOOK): homebrew
 	pre-commit install
 
@@ -54,4 +67,4 @@ help:
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
-.PHONY: all help bootstrap test gems certs carting lint fmt homebrew deps swiftlint
+.PHONY: all help bootstrap test gems certs carting lint fmt homebrew deps swiftlint icon
