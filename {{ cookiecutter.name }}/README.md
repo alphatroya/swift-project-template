@@ -9,7 +9,7 @@ make bootstrap
 
 ## Bitrise CI configuration
 
-Paste [bitrise.yml](./fastlane/bitrise.yml) content in the bitrise project settings page.
+Paste [bitrise.yml](https://github.com/alphatroya/swift-project-template/wiki/Bitrise%20config) content in the bitrise project settings page.
 
 Also some additional environment parameters should be set:
 
@@ -21,7 +21,7 @@ Also some additional environment parameters should be set:
 The project was generated using the [cookiecutter tool](https://github.com/audreyr/cookiecutter)
 and [this](https://github.com/alphatroya/swift-project-template) swift template.
 
-Template version: 1.0.25
+Template version: 1.0.26
 
 ## Copyright
 
