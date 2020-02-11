@@ -54,6 +54,7 @@ opt_in_rules:
   - prefer_self_type_over_type_of_self
   - prefixed_toplevel_constant
   - private_action
+  - prohibited_nan_comparison
   - prohibited_super_call
   - quick_discouraged_call
   - quick_discouraged_focused_test
@@ -62,6 +63,7 @@ opt_in_rules:
   - redundant_nil_coalescing
   - redundant_objc_attribute
   - required_enum_case
+  - return_value_from_void_function
   - single_test_class
   - sorted_first_last
   - sorted_imports
@@ -69,10 +71,12 @@ opt_in_rules:
   - strict_fileprivate
   - switch_case_on_newline
   - toggle_bool
+  - tuple_pattern
   - type_contents_order
   - unneeded_parentheses_in_closure_argument
   - untyped_error_in_catch
   - vertical_parameter_alignment_on_call
+  - void_function_in_ternary
   - yoda_condition
 
 analyzer_rules:
@@ -91,3 +95,5 @@ cyclomatic_complexity:
   error: 30
 deployment_target:
   iOS_deployment_target: {{ cookiecutter.deployment_target }}
+empty_count:
+  only_after_dot: true
