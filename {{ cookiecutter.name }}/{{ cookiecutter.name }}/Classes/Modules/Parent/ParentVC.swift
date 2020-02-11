@@ -21,10 +21,6 @@ class ParentVC: UIViewController {
         }
     }
 
-    deinit {
-        log.debug("%{public}@ released 🙌", String(describing: type(of: self)))
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureStatusBar()
@@ -38,6 +34,10 @@ class ParentVC: UIViewController {
             gestureRecognizer.delegate = gestureHandler
             gestureRecognizer.isEnabled = navigationController.viewControllers.count > 1
         }
+    }
+
+    deinit {
+        log.debug("%{public}@ released 🙌", String(describing: type(of: self)))
     }
 }
 
