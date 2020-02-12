@@ -59,6 +59,10 @@ endif
 $(PRE_COMMIT_HOOK): homebrew
 	pre-commit install
 
+## clean: Clean all git ignored files
+clean:
+	git clean -Xfd
+
 ## help: Prints help message
 help:
 	@echo "Usage: \n"
