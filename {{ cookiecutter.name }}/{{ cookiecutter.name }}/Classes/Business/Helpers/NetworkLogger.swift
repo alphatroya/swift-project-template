@@ -11,7 +11,7 @@ enum NetworkLogger {
 
     static func logRequest(_ request: URLRequest) {
         logMessageBlock {
-            log.debug("**REQUEST** =>> %{public}@", logger: .network, request.httpieDescription)
+            log.debug("**REQUEST** =>> %{public}@", logger: .network, request.cURL)
         }
     }
 
