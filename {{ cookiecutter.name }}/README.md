@@ -11,7 +11,7 @@ make bootstrap
 
 Paste [bitrise.yml](https://github.com/alphatroya/swift-project-template/wiki/Bitrise%20config) content in the bitrise project settings page.
 
-Also some additional environment parameters should be set:
+Also, some environment parameters need to be set:
 
 - `$MATCH_PASSWORD`: password to the [match](https://docs.fastlane.tools/actions/match/) repo
 - `$FASTLANE_PASSWORD`: AppleID password
@@ -21,7 +21,7 @@ Also some additional environment parameters should be set:
 The project was generated using the [cookiecutter tool](https://github.com/audreyr/cookiecutter)
 and [this](https://github.com/alphatroya/swift-project-template) swift template.
 
-Template version: 1.0.30
+Template version: 1.1.0
 
 ## Copyright
 
