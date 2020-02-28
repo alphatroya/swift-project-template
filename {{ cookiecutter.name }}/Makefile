@@ -70,7 +70,7 @@ clean:
 ## help: Prints help message
 help:
 	@echo "Usage: \n"
-	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /'
+	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /' | sort
 
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
