@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Generate xcodeproj file
-mint run "yonaskolb/XcodeGen"
+make project
 
 # Generate SwiftGen files
 make swiftgen
@@ -13,7 +13,6 @@ echo '.idea' >> .gitignore
 echo 'Templates' >> .gitignore
 
 make icon
-rm -fr project.yml
 
 mint run "carthage/carthage" carthage update --no-use-binaries --platform iOS --no-build
 

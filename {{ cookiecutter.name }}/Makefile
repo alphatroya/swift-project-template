@@ -15,6 +15,10 @@ deps:
 certs: gems
 	bundle exec fastlane match development --readonly
 
+## project: Generate .xcodeproj file using XcodeGen utility
+project:
+	mint run "yonaskolb/XcodeGen"
+
 ## test: Launch unit tests
 test: gems
 	bundle exec fastlane test
@@ -71,4 +75,4 @@ help:
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
-.PHONY: all help bootstrap test gems certs carting lint fmt homebrew deps swiftlint icon
+.PHONY: all help bootstrap test gems certs carting lint fmt homebrew deps swiftlint icon project
