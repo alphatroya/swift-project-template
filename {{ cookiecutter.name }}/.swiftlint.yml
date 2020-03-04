@@ -4,6 +4,7 @@ excluded:
 
 disabled_rules:
   - trailing_comma
+  - todo
 
 opt_in_rules:
   - array_init
