@@ -11,7 +11,7 @@ class LineView: UIView {
 
     @available(*, deprecated)
     required init(coder _: NSCoder) {
-        fatalError("NSCoding not supported")
+        preconditionFailure("NSCoding not supported")
     }
 
     init(axis: LineAxis, color: UIColor, thickness: CGFloat = 1) {
