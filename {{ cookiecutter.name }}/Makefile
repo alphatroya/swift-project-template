@@ -75,4 +75,4 @@ help:
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
-.PHONY: all help bootstrap test gems certs carting lint fmt homebrew deps swiftlint icon project
+.PHONY: all help bootstrap test gems certs carting lint fmt homebrew deps swiftlint icon project clean
