@@ -63,7 +63,7 @@ endif
 $(PRE_COMMIT_HOOK): homebrew
 	pre-commit install
 
-## clean: Clean all git ignored files
+## clean: Clean up project files
 clean:
 	git clean -Xfd
 
@@ -75,4 +75,4 @@ help:
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
-.PHONY: all help bootstrap test gems certs carting lint fmt homebrew deps swiftlint icon project
+.PHONY: all help bootstrap test gems certs carting lint fmt homebrew deps swiftlint icon project clean
