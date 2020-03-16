@@ -63,7 +63,7 @@ endif
 $(PRE_COMMIT_HOOK): homebrew
 	pre-commit install
 
-## clean: Clean all git ignored files
+## clean: Clean up project files
 clean:
 	git clean -Xfd
 
