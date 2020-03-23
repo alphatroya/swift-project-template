@@ -1,4 +1,3 @@
 brew "mint"
 brew "libxml2"
 brew "carthage"
-brew "pre-commit"

@@ -1,10 +1,9 @@
 BREW := /usr/local/bin/brew
-PRE_COMMIT_HOOK := .git/hooks/pre-commit
 
 all: bootstrap
 
 ## bootstrap: Bootstrap project dependencies for development
-bootstrap: $(PRE_COMMIT_HOOK) certs deps homebrew
+bootstrap: hook certs deps homebrew
 	mint bootstrap
 
 ## deps: Bootstrap swift dependencies
@@ -60,8 +59,10 @@ else
 	echo 'File "Icon.png" is not exits in the project root directory'
 endif
 
-$(PRE_COMMIT_HOOK): homebrew
-	pre-commit install
+## hook: Install git pre-commit hook
+hook:
+	curl "https://gist.githubusercontent.com/alphatroya/884aef2590d3c873d4f0d447d6a95a3c/raw/8a2682772cf9a7625b680771cf9ad9106c6cf00e/pre-commit" > .git/hooks/pre-commit
+	chmod +x .git/hooks/pre-commit
 
 ## clean: Clean up project files
 clean:
@@ -75,4 +76,4 @@ help:
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
-.PHONY: all help bootstrap test gems certs carting lint fmt homebrew deps swiftlint icon project clean
+.PHONY: all help bootstrap test gems certs carting lint fmt homebrew deps swiftlint icon project clean hook

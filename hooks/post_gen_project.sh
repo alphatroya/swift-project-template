@@ -24,6 +24,4 @@ git add .
 git commit -m "Initial commit"
 git checkout -b develop
 
-if which pre-commit >/dev/null; then
-    pre-commit install
-fi
+make hook
