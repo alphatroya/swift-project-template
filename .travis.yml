@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode11.2
+osx_image: xcode11.4
 xcode_sdk: iphoneos11.0
 env:
   - MINT_PATH="~/mint_cache"
