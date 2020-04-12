@@ -13,4 +13,5 @@ script:
   - brew install cookiecutter mint
   - cookiecutter --no-input -f .
   - cd Project
+  - mint bootstrap
   - make test
