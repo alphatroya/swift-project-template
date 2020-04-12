@@ -9,6 +9,11 @@ jobs:
       MINT_PATH: "~/mint_cache"
 
     steps:
+    - name: Select Xcode
+      run: |
+        sudo xcode-select -s /Applications/Xcode_11.4.app/Contents/Developer
+        xcodebuild -version
+
     - uses: actions/checkout@v1
 
     - name: Cache Mint
