@@ -25,7 +25,7 @@ jobs:
 
     - name: Test
       run: |
-        rm -fr ~/mint_cache
+        brew uninstall swiftlint --force
         brew install cookiecutter mint libxml2
         cookiecutter --no-input -f .
         cd Project
