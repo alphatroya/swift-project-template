@@ -13,6 +13,4 @@ script:
   - brew install cookiecutter mint
   - cookiecutter --no-input -f .
   - cd Project
-  # - mint install --force bartycrouch
-  # - mint install --force swiftlint
   - make test
