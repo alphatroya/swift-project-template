@@ -10,12 +10,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    
+
     - name: Select Xcode
       run: |
         sudo xcode-select -s /Applications/Xcode_11.4.app/Contents/Developer
         xcodebuild -version
-        
+
     - name: Cache Mint
       id: cache-mint
       uses: actions/cache@v1
@@ -25,6 +25,7 @@ jobs:
 
     - name: Test
       run: |
+        rm -fr ~/mint_cache
         brew install cookiecutter mint libxml2
         cookiecutter --no-input -f .
         cd Project

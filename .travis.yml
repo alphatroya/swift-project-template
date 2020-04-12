@@ -6,11 +6,11 @@ env:
 cache:
   bundler: true
   directories:
-    # - $MINT_PATH
+    - $MINT_PATH
     - Project/Carthage/Build
 script:
+  - rm -fr $MINT_PATH
   - brew install cookiecutter mint
   - cookiecutter --no-input -f .
   - cd Project
-  - mint bootstrap
   - make test
