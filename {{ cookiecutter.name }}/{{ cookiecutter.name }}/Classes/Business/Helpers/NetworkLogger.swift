@@ -27,7 +27,7 @@ enum NetworkLogger {
 
     static func logError(_ error: Error) {
         logMessageBlock {
-            log.error("**RESPONSE ERROR** =>> %{public}@", logger: .network, error.localizedDescription)
+            log.error("**RESPONSE ERROR** =>> %{public}@", logger: .network, "\(error)")
         }
     }
 
