@@ -1,4 +1,4 @@
---swiftversion 5.1
+--swiftversion 5.2
 --header "\n{{ cookiecutter.name }}\nCopyright © {created.year} {{ cookiecutter.organization }}. All rights reserved.\n//"
 --exclude {{ cookiecutter.name }}/Classes/Generated
 --maxwidth 140
