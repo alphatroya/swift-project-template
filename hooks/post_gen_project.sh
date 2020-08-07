@@ -7,7 +7,7 @@ make project
 make swiftgen
 
 # Download .gitignore file
-curl 'https://www.gitignore.io/api/swift,macos,fastlane,carthage' > .gitignore
+curl -L 'https://www.gitignore.io/api/swift,macos,fastlane,carthage' > .gitignore
 echo 'Carthage/Checkouts' >> .gitignore
 echo '.idea' >> .gitignore
 echo 'Templates' >> .gitignore
