@@ -3,7 +3,7 @@ name: "Build project and run tests"
 on: [push]
 
 jobs:
-  build:
+  test:
     runs-on: macos-latest
     env:
       MINT_PATH: "~/mint_cache"
@@ -23,7 +23,7 @@ jobs:
         path: ~/mint_cache
         key: cache
 
-    - name: Test
+    - name: Generate project and run tests
       run: |
         brew install cookiecutter mint
         cookiecutter --no-input -f .
