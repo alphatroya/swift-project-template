@@ -6,9 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.20] - 2020-08-18
 ### Changed
-- Отключены SwiftLint правила 'prohibited_nan_comparison',
-'return_value_from_void_function', 'tuple_pattern' и 'void_function_in_ternary', так как 
+- Отключены SwiftLint правила prohibited_nan_comparison,
+return_value_from_void_function, tuple_pattern и void_function_in_ternary, так как 
 они были исключены из релиза
+- Включены новые SwiftLint правила: prefer_zero_over_explicit_init
 
 ## [1.1.19] - 2020-08-18
 ### Changed
