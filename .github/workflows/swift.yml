@@ -1,4 +1,4 @@
-name: Swift
+name: "Build project and run tests"
 
 on: [push]
 
