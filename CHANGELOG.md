@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.20] - 2020-08-18
 ### Changed
+- Обновил SwiftLint утилиту до версии 0.40.0
 - Отключены SwiftLint правила prohibited_nan_comparison,
 return_value_from_void_function, tuple_pattern и void_function_in_ternary, так как 
 они были исключены из релиза
