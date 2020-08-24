@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Добавил проверку на установленный mint в build phase, так как сборка падала на системах
 где он не был установлен
 
-
 ## [1.1.20] - 2020-08-18
 ### Changed
 - Обновил SwiftLint утилиту до версии 0.40.0
