@@ -45,12 +45,16 @@ targets:
         name: BartyCrouch
       - script: |
                 if [ "${CONFIGURATION}" == "Debug" ]; then
-                  make swiftgen
+                  if which mint >/dev/null; then
+                    make swiftgen
+                  fi
                 fi
         name: SwiftGen
       - script: |
                 if [ "${CONFIGURATION}" == "Debug" ]; then
-                  make lint
+                  if which mint >/dev/null; then
+                    make lint
+                  fi
                 fi
         name: SwiftLint
     attributes:
