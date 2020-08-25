@@ -12,8 +12,14 @@ platform :ios do
   desc 'Create a new application on the developer portal'
   lane :create do
     produce
-    match(type: "development")
-    match(type: "appstore")
+    match(
+      type: "development",
+      clone_branch_directly: false,
+    )
+    match(
+      type: "appstore",
+      clone_branch_directly: false,
+    )
   end
 
   desc 'Register devices on apple portal'
