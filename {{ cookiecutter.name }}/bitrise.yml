@@ -18,7 +18,9 @@ workflows:
   internal:
     steps:
     - activate-ssh-key:
+      {% raw %}
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      {%- endraw %}
     - git-clone: {}
     - cache-pull: {}
     - bitrise-step-install-bundler: {}
@@ -35,7 +37,9 @@ workflows:
   test:
     steps:
     - activate-ssh-key:
+      {% raw %}
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      {%- endraw %}
     - git-clone: {}
     - cache-pull: {}
     - bitrise-step-install-bundler: {}
@@ -54,7 +58,9 @@ workflows:
   bootstrap_carthage:
     steps:
     - activate-ssh-key:
+      {% raw %}
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      {%- end %}
     - git-clone: {}
     - cache-pull: {}
     - script:
@@ -76,7 +82,9 @@ workflows:
   release:
     steps:
     - activate-ssh-key:
+      {% raw %}
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      {%- end %}
     - git-clone: {}
     - cache-pull: {}
     - bitrise-step-install-bundler: {}
