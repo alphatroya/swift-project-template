@@ -1,0 +1,103 @@
+---
+format_version: '4'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: fastlane
+app:
+  envs:
+  - FASTLANE_XCODE_LIST_TIMEOUT: '120'
+  - opts:
+      is_expand: false
+    FASTLANE_WORK_DIR: ".fastlane"
+  - opts:
+      is_expand: false
+    FASTLANE_LANE: ios internal
+  - opts:
+      is_expand: false
+    FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: '30'
+workflows:
+  internal:
+    steps:
+    - activate-ssh-key:
+        {% raw -%}run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'{%- endraw %}
+    - git-clone: {}
+    - cache-pull: {}
+    - bitrise-step-install-bundler: {}
+    - fastlane:
+        inputs:
+        - lane: "$FASTLANE_LANE"
+        - update_fastlane: 'false'
+        - work_dir: "./"
+    - deploy-to-bitrise-io: {}
+    - cache-push:
+        inputs:
+        - cache_paths: "./Carthage/Build"
+        is_always_run: true
+  test:
+    steps:
+    - activate-ssh-key:
+        {% raw -%}run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'{%- endraw %}
+    - git-clone: {}
+    - cache-pull: {}
+    - bitrise-step-install-bundler: {}
+    - fastlane:
+        inputs:
+        - lane: "$FASTLANE_LANE"
+        - update_fastlane: 'false'
+        - work_dir: "./"
+    - deploy-to-bitrise-io: {}
+    - cache-push:
+        inputs:
+        - cache_paths: "./Carthage/Build"
+        is_always_run: true
+    envs:
+    - FASTLANE_LANE: ios test
+  bootstrap_carthage:
+    steps:
+    - activate-ssh-key:
+        {% raw -%}run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'{%- endraw %}
+    - git-clone: {}
+    - cache-pull: {}
+    - script:
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            carthage bootstrap --no-use-binaries --platform iOS --cache-builds
+        title: Build Carthage
+    - deploy-to-bitrise-io: {}
+    - cache-push:
+        inputs:
+        - cache_paths: "./Carthage/Build"
+        is_always_run: true
+  release:
+    steps:
+    - activate-ssh-key:
+        {% raw -%}run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'{%- endraw %}
+    - git-clone: {}
+    - cache-pull: {}
+    - bitrise-step-install-bundler: {}
+    - fastlane:
+        inputs:
+        - lane: "$FASTLANE_LANE"
+        - update_fastlane: 'false'
+        - work_dir: "./"
+    - deploy-to-bitrise-io: {}
+    - cache-push:
+        inputs:
+        - cache_paths: "./Carthage/Build"
+        is_always_run: true
+    envs:
+    - FASTLANE_LANE: ios release
+trigger_map:
+- push_branch: release/*
+  workflow: release
+- pull_request_source_branch: feature/*
+  workflow: test
+  pull_request_target_branch: develop
+meta:
+  bitrise.io:
+    machine_type: performance
