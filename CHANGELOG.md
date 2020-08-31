@@ -4,8 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.25] - 2020-08-31
+### Changed
+- Переименовал папку UIKit -> Views (теперь там могут быть общие вьюхи не только от UIKit).
+- Переместил родительский класс NavigationController в папку Parent
+
 ## [1.1.24] - 2020-08-31
-## Changed
+### Changed
 - Swiftformat утилита обновлена до 0.46.1
 - Включена опция isEmpty для swiftformat для преобразования `.count == 0 => .isEmpty`
 - Включена опция `organizeDeclarations` для swiftformat для форматирования структуры файлов
