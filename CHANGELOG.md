@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.24] - 2020-08-31
+## Changed
+- Swiftformat утилита обновлена до 0.46.1
+- Включена опция isEmpty для swiftformat для преобразования `.count == 0 => .isEmpty`
+- Включена опция `organizeDeclarations` для swiftformat для форматирования структуры файлов
+- Выключено правило `type_contents_order` для swiftlint с которым swiftformat конфликтовал
+
 ## [1.1.23] - 2020-08-26
 ### Added
 - Сервис bitrise.io включил возможность хранения `bitrise.yml` файла в репозитории. Файл 

@@ -4,3 +4,4 @@
 --maxwidth 140
 --wraparguments before-first
 --wrapcollections before-first
+--enable isEmpty,organizeDeclarations

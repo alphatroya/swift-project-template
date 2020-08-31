@@ -71,7 +71,6 @@ opt_in_rules:
   - strict_fileprivate
   - switch_case_on_newline
   - toggle_bool
-  - type_contents_order
   - unneeded_parentheses_in_closure_argument
   - untyped_error_in_catch
   - vertical_parameter_alignment_on_call
