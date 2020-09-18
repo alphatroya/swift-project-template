@@ -38,10 +38,6 @@ fmt:
 lint:
 	mint run swiftlint
 
-## carting: Update "Carthage" project Build Phase to include all Carthage dependencies
-carting:
-	mint run carting carting update
-
 ## swiftgen: Trigger code generation from assets with swiftgen tool
 swiftgen:
 	mint run swiftgen
