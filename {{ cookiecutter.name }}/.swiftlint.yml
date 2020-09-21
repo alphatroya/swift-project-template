@@ -1,5 +1,4 @@
 excluded:
-  - Carthage
   - {{ cookiecutter.name }}/Classes/Generated
 
 disabled_rules:
