@@ -35,7 +35,6 @@ platform :ios do
 
   desc 'Perform test checks'
   lane :test do
-    bootstrap_carthage
     scan(
       output_directory: deploy_dir,
     )
@@ -47,8 +46,6 @@ platform :ios do
       type: "appstore",
       readonly: true
     )
-
-    bootstrap_carthage
 
     add_badge(
       glob: '/{{ cookiecutter.name }}/**/*.appiconset/*.{png, PNG}'
@@ -75,13 +72,5 @@ platform :ios do
 
   desc 'Deploy a release build'
   lane :release do
-  end
-
-  private_lane :bootstrap_carthage do
-    carthage(
-      platform: 'iOS',
-      cache_builds: true,
-      use_binaries: false,
-    )
   end
 end

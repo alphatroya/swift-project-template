@@ -3,12 +3,8 @@ BREW := /usr/local/bin/brew
 all: bootstrap
 
 ## bootstrap: Bootstrap project dependencies for development
-bootstrap: hook certs deps homebrew
+bootstrap: hook certs homebrew
 	mint bootstrap
-
-## deps: Bootstrap swift dependencies
-deps:
-	mint run carthage/carthage carthage bootstrap --cache-builds --platform ios
 
 ## certs: Download Apple certificates for development
 certs: gems
@@ -74,4 +70,4 @@ help:
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
-.PHONY: all help bootstrap test gems certs carting lint fmt homebrew deps swiftlint icon project clean hook
+.PHONY: all help bootstrap test gems certs lint fmt homebrew swiftlint icon project clean hook

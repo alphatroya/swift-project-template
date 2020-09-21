@@ -7,14 +7,11 @@ make project
 make swiftgen
 
 # Download .gitignore file
-curl -L 'https://www.gitignore.io/api/swift,macos,fastlane,carthage' > .gitignore
-echo 'Carthage/Checkouts' >> .gitignore
+curl -L 'https://www.gitignore.io/api/swift,macos,fastlane' > .gitignore
 echo '.idea' >> .gitignore
 echo 'Templates' >> .gitignore
 
 make icon
-
-mint run "carthage/carthage" carthage update --no-use-binaries --platform iOS --no-build
 
 make fmt
 make gems
