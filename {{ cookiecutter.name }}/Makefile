@@ -3,7 +3,7 @@ BREW := /usr/local/bin/brew
 all: bootstrap
 
 ## bootstrap: Bootstrap project dependencies for development
-bootstrap: hook certs homebrew
+bootstrap: homebrew hook certs
 	mint bootstrap
 
 ## certs: Download Apple certificates for development
