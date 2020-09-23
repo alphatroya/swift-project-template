@@ -5,3 +5,4 @@
 --wraparguments before-first
 --wrapcollections before-first
 --enable isEmpty,organizeDeclarations
+--lifecycle viewDidLoad,viewWillAppear,viewDidAppear,viewDidDisappear,viewWillDisappear
