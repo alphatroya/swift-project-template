@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.4] - 2020-10-05
+### Changed
+- Обновил AppIcon утилиту до 1.0.5 версии, так как предыдущая не собиралась на Swift 5.3
+
 ## [1.2.3] - 2020-09-29
 ### Fixed
 - Обновил BartyCrouch утилиту до версии 4.3.0, так как на предыдущей версии были проблемы с Swift 5.3
