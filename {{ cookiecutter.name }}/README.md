@@ -1,6 +1,6 @@
 # {{ cookiecutter.name }}
 
-/// A place for CI status badge
+<!--- A place for CI status badge --->
 
 ## Bootstrapping development environment
 ```sh
