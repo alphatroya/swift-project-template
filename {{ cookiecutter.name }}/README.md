@@ -9,9 +9,9 @@ make bootstrap
 
 ## Bitrise CI configuration
 
-Paste [bitrise.yml](https://github.com/alphatroya/swift-project-template/wiki/Bitrise%20config) content in the bitrise project settings page.
+Configure Bitrise for using stored in repository `bitrise.yml` file.
 
-Also, some environment parameters need to be set:
+Also, some secret environment parameters need to be set:
 
 - `$MATCH_PASSWORD`: password to the [match](https://docs.fastlane.tools/actions/match/) repo
 - `$APPSTORE_API_KEY_ENCRYPT_PWD`: password for the encrypted `api-key.json` file
