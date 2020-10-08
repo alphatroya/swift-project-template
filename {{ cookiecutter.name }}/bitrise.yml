@@ -20,6 +20,11 @@ workflows:
     - activate-ssh-key:
         {% raw -%}run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'{%- endraw %}
     - git-clone: {}
+    - decrypt-file@0:
+        inputs:
+        - encrypted_file_path: fastlane/api-key.json.gpg
+        - output_file_path: fastlane/api-key.json
+        - decrypt_passphrase: $APPSTORE_API_KEY_ENCRYPT_PWD
     - cache-pull: {}
     - bitrise-step-install-bundler: {}
     - fastlane:
@@ -78,6 +83,11 @@ workflows:
     - activate-ssh-key:
         {% raw -%}run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'{%- endraw %}
     - git-clone: {}
+    - decrypt-file@0:
+        inputs:
+        - encrypted_file_path: fastlane/api-key.json.gpg
+        - output_file_path: fastlane/api-key.json
+        - decrypt_passphrase: $APPSTORE_API_KEY_ENCRYPT_PWD
     - cache-pull: {}
     - bitrise-step-install-bundler: {}
     - fastlane:

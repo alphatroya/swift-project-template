@@ -1,6 +1,6 @@
 # My iOS app template
 
-[![Build Status](https://travis-ci.com/alphatroya/swift-project-template.svg?branch=master)](https://travis-ci.com/alphatroya/swift-project-template)
+![Build project and run tests](https://github.com/alphatroya/swift-project-template/workflows/Build%20project%20and%20run%20tests/badge.svg)
 
 ## Description
 
