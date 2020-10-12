@@ -40,6 +40,7 @@ platform :ios do
   lane :test do
     scan(
       output_directory: deploy_dir,
+      cloned_source_packages_path: ".cache/spm",
     )
   end
 
@@ -60,7 +61,8 @@ platform :ios do
 
     gym(
       export_method: 'app-store',
-      configuration: 'Release'
+      configuration: 'Release',
+      cloned_source_packages_path: ".cache/spm",
     )
 
     pilot(
