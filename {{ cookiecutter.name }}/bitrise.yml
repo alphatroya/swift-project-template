@@ -35,7 +35,7 @@ workflows:
     - deploy-to-bitrise-io: {}
     - cache-push:
         inputs:
-        - cache_paths: "./Carthage/Build"
+        - cache_paths: .cache/spm -> .cache/spm/workspace-state.json
         is_always_run: true
   test:
     steps:
@@ -52,7 +52,7 @@ workflows:
     - deploy-to-bitrise-io: {}
     - cache-push:
         inputs:
-        - cache_paths: "./Carthage/Build"
+        - cache_paths: .cache/spm -> .cache/spm/workspace-state.json
         is_always_run: true
     envs:
     - FASTLANE_LANE: ios test
@@ -71,12 +71,12 @@ workflows:
             # debug log
             set -x
 
-            # TODO: complete SPM dependencies caching
+            xcodebuild -resolvePackageDependencies -scheme {{ cookiecutter.name }} -project {{ cookiecutter.name }}.xcodeproj -clonedSourcePackagesDirPath .cache/spm
         title: Build Carthage
     - deploy-to-bitrise-io: {}
     - cache-push:
         inputs:
-        - cache_paths: "./Carthage/Build"
+        - cache_paths: .cache/spm -> .cache/spm/workspace-state.json
         is_always_run: true
   release:
     steps:
@@ -98,7 +98,7 @@ workflows:
     - deploy-to-bitrise-io: {}
     - cache-push:
         inputs:
-        - cache_paths: "./Carthage/Build"
+        - cache_paths: .cache/spm -> .cache/spm/workspace-state.json
         is_always_run: true
     envs:
     - FASTLANE_LANE: ios release

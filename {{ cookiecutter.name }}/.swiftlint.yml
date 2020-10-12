@@ -1,5 +1,6 @@
 excluded:
   - {{ cookiecutter.name }}/Classes/Generated
+  - .cache
 
 disabled_rules:
   - trailing_comma

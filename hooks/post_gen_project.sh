@@ -11,6 +11,7 @@ curl -L 'https://www.gitignore.io/api/swift,macos,fastlane' > .gitignore
 echo '.idea' >> .gitignore
 echo 'Templates' >> .gitignore
 echo 'fastlane/api-key.json' >> .gitignore
+echo '.cache' >> .gitignore
 
 make icon
 
