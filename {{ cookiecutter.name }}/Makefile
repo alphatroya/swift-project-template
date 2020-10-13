@@ -53,10 +53,8 @@ endif
 
 ## hook: Install git pre-commit hook
 hook:
-	curl "https://gist.githubusercontent.com/alphatroya/884aef2590d3c873d4f0d447d6a95a3c/raw/8a2682772cf9a7625b680771cf9ad9106c6cf00e/pre-commit" > .git/hooks/pre-commit
+	ln -sf ../../hooks/pre-commit .git/hooks/pre-commit
 	chmod +x .git/hooks/pre-commit
-	echo "\nmint run xcodegen" >> .git/hooks/pre-commit
-	echo "git add {{ cookiecutter.name }}.xcodeproj" >> .git/hooks/pre-commit
 
 ## clean: Clean up project files
 clean:
