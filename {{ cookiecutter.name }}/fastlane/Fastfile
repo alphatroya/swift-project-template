@@ -6,6 +6,7 @@ default_platform :ios
 
 build_number = ENV['BITRISE_BUILD_NUMBER']
 deploy_dir = ENV['BITRISE_DEPLOY_DIR']
+api_key = "fastlane/api-key.json"
 
 platform :ios do
 
@@ -15,24 +16,25 @@ platform :ios do
     match(
       type: "development",
       clone_branch_directly: false,
-      api_key_path: "fastlane/api-key.json",
+      api_key_path: api_key,
     )
     match(
       type: "appstore",
       clone_branch_directly: false,
-      api_key_path: "fastlane/api-key.json",
+      api_key_path: api_key,
     )
   end
 
   desc 'Register devices on apple portal'
   lane :register do
     register_devices(
-      devices_file: "./fastlane/devices.txt"
+      devices_file: "./fastlane/devices.txt",
+      api_key_path: api_key,
     )
     match(
       type: "development",
       force_for_new_devices: true,
-      api_key_path: "fastlane/api-key.json",
+      api_key_path: api_key,
     )
   end
 
@@ -66,7 +68,7 @@ platform :ios do
     )
 
     pilot(
-      api_key_path: "fastlane/api-key.json",
+      api_key_path: api_key,
       distribute_external: true,
       beta_app_feedback_email: '{{ cookiecutter.apple_id }}',
       beta_app_description: 'Beta build for testing',
