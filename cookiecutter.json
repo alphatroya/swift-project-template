@@ -8,5 +8,6 @@
     "apple_id": "",
     "match_repo_url": "",
     "ipad" : ["Yes", "No"],
-    "development_itc_team": ""
+    "development_itc_team": "",
+    "enable_bitrise": ["Yes", "No"]
 }

@@ -18,6 +18,10 @@ make icon
 make fmt
 make gems
 
+{% if cookiecutter.enable_bitrise == "No" %}
+    rm -fr bitrise.yml
+{% endif %}
+
 git init
 git add .
 git commit -m "Initial commit"
