@@ -1,0 +1,4 @@
+- [ ] I've updated the CHANGELOG.md file with upcoming changes
+- [ ] I've updated a version tag in README.md
+- [ ] I've checked template bootstrapping locally before submission this PR
+- [ ] I'll push the version tag after PR will be merged

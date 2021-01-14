@@ -70,7 +70,7 @@ platform :ios do
     pilot(
       api_key_path: api_key,
       distribute_external: true,
-      beta_app_feedback_email: '{{ cookiecutter.apple_id }}',
+      beta_app_feedback_email: '{{ cookiecutter.feedback_email }}',
       beta_app_description: 'Beta build for testing',
       changelog: 'Fixes and improvements',
       groups: 'Beta',
