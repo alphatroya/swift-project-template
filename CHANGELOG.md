@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2.15] - TBA
 ### Changed
 - Обновил BartyCrouch до версии 4.4.1
+- Удалил `.git` зависимость из `make clean` действия
 
 ## [1.2.14] - 2021-01-15
 ### Changed
