@@ -58,7 +58,7 @@ hook:
 
 ## clean: Clean up project files
 clean:
-	git clean -Xfd
+	rm -fr .cache .build
 
 ## help: Prints help message
 help:
