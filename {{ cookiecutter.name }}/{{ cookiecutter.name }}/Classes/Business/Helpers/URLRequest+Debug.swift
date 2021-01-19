@@ -1,3 +1,4 @@
+
 import Foundation
 
 extension URLRequest {
@@ -15,8 +16,7 @@ extension URLRequest {
             }
         }
 
-        if let httpBody = self.httpBody
-            .flatMap({ String(data: $0, encoding: .utf8) }) {
+        if let httpBody = self.httpBody.flatMap({ String(data: $0, encoding: .utf8) }) {
             components.append("-d '\(httpBody)'")
         }
 

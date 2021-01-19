@@ -9,7 +9,7 @@ class LineView: UIView {
 
     private let axis: LineAxis
 
-    @available(*, deprecated)
+    @available(*, unavailable)
     required init(coder _: NSCoder) {
         preconditionFailure("NSCoding not supported")
     }
