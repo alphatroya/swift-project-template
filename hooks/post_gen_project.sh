@@ -22,6 +22,8 @@ make gems
     rm -fr bitrise.yml
 {% endif %}
 
+xcodebuild -version > .xcode-version
+
 git init
 git add .
 git commit -m "Initial commit"
