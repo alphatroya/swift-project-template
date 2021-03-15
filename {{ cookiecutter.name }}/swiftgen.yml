@@ -9,24 +9,24 @@ strings:
 xcassets:
     inputs: Assets.xcassets
     outputs:
-        templateName: swift4
+        templateName: swift5
         output: Assets.swift
 plist:
     inputs: Info.plist
     outputs:
-        templateName: runtime-swift4
+        templateName: runtime-swift5
         output: Plist.swift
 ib:
     inputs: Storyboards
     outputs:
-        - templateName: scenes-swift4
+        - templateName: scenes-swift5
           output: StoryboardScenes.swift
           params:
             ignoreTargetModule: true
-        - templateName: segues-swift4
+        - templateName: segues-swift5
           output: StoryboardSegues.swift
 fonts:
     inputs: Fonts
     outputs:
-        templateName: swift4
+        templateName: swift5
         output: Fonts.swift
