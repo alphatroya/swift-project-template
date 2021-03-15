@@ -7,10 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2.18] - 2021-03-15
 ### Changed
 - Обновил имена SwiftGen темплейтов до swift5 версии
+- Установил переменную окружения FASTLANE_SKIP_UPDATE_CHECK в true. Теперь текст с обновлениями fastlane не будет показываться во время сборки
 
 ## [1.2.17] - 2021-03-10
 ### Changed
-- Во время генерации проекта теперь создается `.xcode-version` файл с проектной версией XCode.
+- Во время генерации проекта теперь создается `.xcode-version` файл с проектной версией XCode
 
 ## [1.2.16] - 2021-02-24
 ### Changed
