@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.2.19] - 2021-03-25
 ### Fixed
-- Добавил генерацию пустого api-key.json файла при вызове fastlane, так как без него вызовы `fastlane match` и `fastlane test` падали.
+- Добавил генерацию пустого api-key.json файла при вызове fastlane, так как без него вызов `fastlane match` падал.
 
 ## [1.2.18] - 2021-03-15
 ### Changed
