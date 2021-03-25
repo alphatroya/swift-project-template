@@ -1,13 +1,17 @@
 BREW := /usr/local/bin/brew
+API_KEY := fastlane/api-key.json
 
 all: bootstrap
+
+$(API_KEY):
+	touch $@
 
 ## bootstrap: Bootstrap project dependencies for development
 bootstrap: homebrew hook certs
 	mint bootstrap
 
 ## certs: Download Apple certificates for development
-certs: gems
+certs: gems $(API_KEY)
 	bundle exec fastlane match development --readonly
 
 ## project: Generate .xcodeproj file using XcodeGen utility
@@ -15,7 +19,7 @@ project:
 	mint run "yonaskolb/XcodeGen"
 
 ## test: Launch unit tests
-test: gems
+test: gems $(API_KEY)
 	bundle exec fastlane test
 
 ## gems: Install ruby dependencies

@@ -21,7 +21,7 @@ Also, some secret environment parameters need to be set:
 The project was generated using the [cookiecutter tool](https://github.com/audreyr/cookiecutter)
 and [this](https://github.com/alphatroya/swift-project-template) swift template.
 
-Template version: 1.2.18
+Template version: 1.2.19
 
 ## AppStore credentials
 
