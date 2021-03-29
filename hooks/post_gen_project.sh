@@ -22,7 +22,7 @@ make gems
     rm -fr bitrise.yml
 {% endif %}
 
-xcodebuild -version > .xcode-version
+xcodebuild -version | sed 's/Xcode //' | head -n 1 > .xcode-version
 
 git init
 git add .
