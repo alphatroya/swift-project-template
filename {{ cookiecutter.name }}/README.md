@@ -16,12 +16,15 @@ Also, some secret environment parameters need to be set:
 - `$MATCH_PASSWORD`: password to the [match](https://docs.fastlane.tools/actions/match/) repo
 - `$APPSTORE_API_KEY_ENCRYPT_PWD`: password for the encrypted `api-key.json` file
 
+## Xcode
+The project uses the version of Xcode specified in the `.xcode-version` file
+
 ## Template info
 
 The project was generated using the [cookiecutter tool](https://github.com/audreyr/cookiecutter)
 and [this](https://github.com/alphatroya/swift-project-template) swift template.
 
-Template version: 1.2.19
+Template version: 1.2.20
 
 ## AppStore credentials
 
