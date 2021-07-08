@@ -31,12 +31,9 @@ final class NetworkLogger {
         }
     }
 
-    private func logMessageBlock(_ logClosure: () -> Void) {
-        switch ProjectConfiguration.current {
-        case .debug:
-            logClosure()
-        case .release:
-            break
-        }
+    private func logMessageBlock(_ log: () -> Void) {
+        #if DEBUG
+        log()
+        #endif
     }
 }
