@@ -23,7 +23,6 @@ settings:
     Debug:
       OTHER_SWIFT_FLAGS: -D DEBUG
     Release:
-      OTHER_SWIFT_FLAGS: -D RELEASE
       SWIFT_COMPILATION_MODE: wholemodule
 targets:
   {{ cookiecutter.name | lower }}:

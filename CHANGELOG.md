@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.21] - 2021-07-08
+### Changed
+- Удалён ProjectConfiguration.swift хэлпер, вместо него лучше использовать #if DEBUG проверки.
+
 ## [1.2.20] - 2021-03-29
 ### Changed
 - Уменьшил количество информации, которая сохраняется в .xcode-version файле
