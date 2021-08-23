@@ -24,7 +24,7 @@ The project uses the version of Xcode specified in the `.xcode-version` file
 The project was generated using the [cookiecutter tool](https://github.com/audreyr/cookiecutter)
 and [this](https://github.com/alphatroya/swift-project-template) swift template.
 
-Template version: 1.2.21
+Template version: 1.2.22
 
 ## AppStore credentials
 
