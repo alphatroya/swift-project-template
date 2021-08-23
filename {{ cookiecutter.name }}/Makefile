@@ -1,5 +1,6 @@
 BREW := /usr/local/bin/brew
 API_KEY := fastlane/api-key.json
+BARTY_CROUCH := "Flinesoft/BartyCrouch@4.4.1"
 
 all: bootstrap
 
@@ -37,6 +38,11 @@ fmt:
 ## lint: Launch swift files linter check
 lint:
 	mint run swiftlint
+
+## l10n: Launch localization files maintenance
+l10n:
+	mint run $(BARTY_CROUCH) bartycrouch update -x
+	mint run $(BARTY_CROUCH) bartycrouch lint -x
 
 ## swiftgen: Trigger code generation from assets with swiftgen tool
 swiftgen:
