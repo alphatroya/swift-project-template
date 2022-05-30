@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.24] - 2022-05-30
+### Changed
+- Обновил SwiftFormat до 0.49.9
+- Обновил версию swift для SwiftFormat до 5.5
+- Обновил SwiftLint 0.47.1
+- Обновил XCodeGen 2.29.0
+- Обновил SwiftGen 6.5.1
+- SwiftFormat теперь удаляет заголовки у файлов
+
 ## [1.2.23] - 2021-09-11
 ### Changed
 - Обновил SwiftLint до 0.44.0 версии
