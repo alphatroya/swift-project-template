@@ -4,14 +4,15 @@ excluded:
 
 disabled_rules:
   - trailing_comma
-  - todo
+  - opening_brace
+  - trailing_whitespace
+  - colon
+  - vertical_whitespace
 
 opt_in_rules:
   - anyobject_protocol
   - array_init
   - attributes
-  - closure_body_length
-  - closure_end_indentation
   - closure_spacing
   - collection_alignment
   - conditional_returns_on_newline
@@ -46,13 +47,10 @@ opt_in_rules:
   - legacy_random
   - literal_expression_end_indentation
   - lower_acl_than_parent
-  - multiline_arguments
   - multiline_function_chains
   - multiline_literal_brackets
   - multiline_parameters
   - multiline_parameters_brackets
-  - no_space_in_method_call
-  - operator_usage_whitespace
   - optional_enum_case_matching
   - orphaned_doc_comment
   - overridden_super_call
@@ -73,7 +71,6 @@ opt_in_rules:
   - required_enum_case
   - single_test_class
   - sorted_first_last
-  - sorted_imports
   - static_operator
   - strict_fileprivate
   - switch_case_on_newline
@@ -82,9 +79,6 @@ opt_in_rules:
   - unneeded_parentheses_in_closure_argument
   - unowned_variable_capture
   - untyped_error_in_catch
-  - vertical_parameter_alignment_on_call
-  - vertical_whitespace_closing_braces
-  - vertical_whitespace_opening_braces
   - xct_specific_matcher
   - yoda_condition
 
@@ -98,8 +92,7 @@ identifier_name:
     warning: 2
     error: 1
   max_length:
-    warning: 24
-    error: 32
+    warning: 32
 cyclomatic_complexity:
   error: 30
 deployment_target:
