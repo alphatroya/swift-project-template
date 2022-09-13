@@ -1,8 +1,8 @@
---swiftversion 5.5
+--swiftversion 5.6
 --header strip
 --exclude **/Generated
 --maxwidth 140
 --wraparguments before-first
 --wrapcollections before-first
---enable isEmpty,organizeDeclarations,markTypes
+--enable isEmpty,organizeDeclarations,markTypes,preferDouble
 --lifecycle viewDidLoad,viewWillAppear,viewDidAppear,viewDidDisappear,viewWillDisappear
