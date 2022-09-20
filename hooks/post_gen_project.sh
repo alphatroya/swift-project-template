@@ -13,8 +13,6 @@ echo 'Templates' >> .gitignore
 echo 'fastlane/api-key.json' >> .gitignore
 echo '.cache' >> .gitignore
 
-make icon
-
 make fmt
 make gems
 
