@@ -1,6 +1,5 @@
 BREW := /usr/local/bin/brew
 API_KEY := fastlane/api-key.json
-BARTY_CROUCH := "Flinesoft/BartyCrouch@4.4.1"
 
 all: bootstrap
 
@@ -39,11 +38,6 @@ fmt:
 lint:
 	mint run swiftlint
 
-## l10n: Launch localization files maintenance
-l10n:
-	mint run $(BARTY_CROUCH) bartycrouch update -x
-	mint run $(BARTY_CROUCH) bartycrouch lint -x
-
 ## swiftgen: Trigger code generation from assets with swiftgen tool
 swiftgen:
 	mint run swiftgen
@@ -65,4 +59,4 @@ help:
 $(BREW):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
-.PHONY: all help bootstrap test gems certs lint fmt homebrew swiftlint icon project clean hook
+.PHONY: all help bootstrap test gems certs lint fmt homebrew swiftlint project clean hook

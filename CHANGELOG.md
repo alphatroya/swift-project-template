@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.30] - 2022-10-10
+### Changed
+- Удалил зависимость с BartyCrouch из Makefile
+
 ## [1.2.29] - 2022-10-02
 ### Changed
 - Обновил SwiftFormat утилиту до 0.50.0
