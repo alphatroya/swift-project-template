@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.31] - 2023-01-15
+### Changed
+- Удалил BartyCrouch helper файл
+
 ## [1.2.30] - 2022-10-10
 ### Changed
 - Удалил зависимость с BartyCrouch из Makefile
