@@ -16,10 +16,6 @@ echo '.cache' >> .gitignore
 make fmt
 make gems
 
-{% if cookiecutter.enable_bitrise == "No" %}
-    rm -fr bitrise.yml
-{% endif %}
-
 xcodebuild -version | sed 's/Xcode //' | head -n 1 > .xcode-version
 
 git init

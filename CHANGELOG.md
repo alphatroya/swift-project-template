@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.32] - 2023-01-16
+### Removed
+- Удален bitrise.yml файл
+
 ## [1.2.31] - 2023-01-15
 ### Changed
 - Удалил BartyCrouch helper файл
