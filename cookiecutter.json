@@ -1,12 +1,14 @@
 {
     "name": "Project",
     "organization": "Organization",
-    "bundle_id" : "com.organization",
+    "bundle_id": "com.organization",
     "deployment_target": "11.0",
     "development_team_id": "",
     "match_repo_url": "",
-    "ipad" : ["Yes", "No"],
+    "ipad": [
+        "Yes",
+        "No"
+    ],
     "development_itc_team": "",
-    "enable_bitrise": ["Yes", "No"],
     "feedback_email": ""
 }
