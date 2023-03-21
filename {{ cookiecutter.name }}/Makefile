@@ -1,4 +1,3 @@
-BREW := /usr/local/bin/brew
 API_KEY := fastlane/api-key.json
 
 all: bootstrap
@@ -27,7 +26,7 @@ gems:
 	bundle install
 
 ## homebrew: Bootstrap Homebrew dependencies
-homebrew: $(BREW)
+homebrew:
 	brew bundle check || brew bundle
 
 ## fmt: Launch swift files code formatter
@@ -55,8 +54,5 @@ clean:
 help:
 	@echo "Usage: \n"
 	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /' | sort
-
-$(BREW):
-	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
 .PHONY: all help bootstrap test gems certs lint fmt homebrew swiftlint project clean hook

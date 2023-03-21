@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.33] - 2023-03-21
+### Removed
+- Удален установщик homebrew из Makefile
+
 ## [1.2.32] - 2023-01-16
 ### Removed
 - Удален bitrise.yml файл
@@ -143,7 +147,7 @@
 
 ## [1.2.1] - 2020-09-21
 ### Fixed
-- Перенес homebrew target на первое место в bootstrap make таргете чтобы он вызывался 
+- Перенес homebrew target на первое место в bootstrap make таргете чтобы он вызывался
 первым при разворачивании проекта.
 
 ## [1.2.0] - 2020-09-21
@@ -177,14 +181,14 @@
 
 ## [1.1.23] - 2020-08-26
 ### Added
-- Сервис bitrise.io включил возможность хранения `bitrise.yml` файла в репозитории. Файл 
+- Сервис bitrise.io включил возможность хранения `bitrise.yml` файла в репозитории. Файл
 перенесен в темплейт из внутренней wiki.
 
 ## [1.1.22] - 2020-08-25
 ### Fixed
-- Установил параметр `clone_branch_directly` в false для `create` lane, так как он может 
-упасть при первом вызове в новую ветку с ошибкой "You passed '' as branch in combination 
-with the `clone_branch_directly` flag. Please remove `clone_branch_directly` flag on the 
+- Установил параметр `clone_branch_directly` в false для `create` lane, так как он может
+упасть при первом вызове в новую ветку с ошибкой "You passed '' as branch in combination
+with the `clone_branch_directly` flag. Please remove `clone_branch_directly` flag on the
 first run for _match_ to create the branch."
 
 ## [1.1.21] - 2020-08-24
@@ -196,7 +200,7 @@ first run for _match_ to create the branch."
 ### Changed
 - Обновил SwiftLint утилиту до версии 0.40.0
 - Отключены SwiftLint правила prohibited_nan_comparison,
-return_value_from_void_function, tuple_pattern и void_function_in_ternary, так как 
+return_value_from_void_function, tuple_pattern и void_function_in_ternary, так как
 они были исключены из релиза
 - Включены новые SwiftLint правила: prefer_zero_over_explicit_init
 

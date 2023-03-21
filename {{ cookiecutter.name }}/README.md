@@ -24,11 +24,11 @@ The project uses the version of Xcode specified in the `.xcode-version` file
 The project was generated using the [cookiecutter tool](https://github.com/audreyr/cookiecutter)
 and [this](https://github.com/alphatroya/swift-project-template) swift template.
 
-Template version: 1.2.32
+Template version: 1.2.33
 
 ## AppStore credentials
 
-Interaction with AppStore needs credentials. This project uses the official [AppStore API](https://docs.fastlane.tools/app-store-connect-api). For proper project deployment process, the project owner needs to create the `fastlane/app-key.json` file with access keys and encrypt by gpg tool with a strong password. 
+Interaction with AppStore needs credentials. This project uses the official [AppStore API](https://docs.fastlane.tools/app-store-connect-api). For proper project deployment process, the project owner needs to create the `fastlane/app-key.json` file with access keys and encrypt by gpg tool with a strong password.
 ```sh
 gpg -c fastlane/api-key.json
 ```
