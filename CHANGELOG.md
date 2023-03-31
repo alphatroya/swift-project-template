@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.34] - 2023-03-31
+### Changed
+- Удалил BartyCrouch config файл
+
 ## [1.2.33] - 2023-03-21
 ### Removed
 - Удален установщик homebrew из Makefile
