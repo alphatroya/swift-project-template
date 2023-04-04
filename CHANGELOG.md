@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.35] - 2023-04-04
+### Removed
+- Удалил NetworkLogger helper класс
+
 ## [1.2.34] - 2023-03-31
 ### Changed
 - Удалил BartyCrouch config файл
