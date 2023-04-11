@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.36] - 2023-04-11
+## Removed
+- Удалил URLRequest+Debug.swift файл, вынес его содержимое в отдельную [библиотеку](https://github.com/alphatroya/curlifier)
+
 ## [1.2.35] - 2023-04-04
 ### Removed
 - Удалил NetworkLogger helper класс
