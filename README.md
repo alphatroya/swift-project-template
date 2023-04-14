@@ -4,7 +4,6 @@
 
 This template bootstrap a iOS project with following properly configured tools
 - XCodeGen
-- SwiftLint
 - SwiftGen
 - fastlane lanes
 - pre-commit hooks
@@ -37,4 +36,3 @@ Alexey Korolev, alphatroya@gmail.com
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-

@@ -35,7 +35,7 @@ fmt:
 
 ## lint: Launch swift files linter check
 lint:
-	mint run swiftlint
+	mint run swiftformat {{ cookiecutter.name }} {{ cookiecutter.name }}Tests --lint
 
 ## swiftgen: Trigger code generation from assets with swiftgen tool
 swiftgen:
@@ -55,4 +55,4 @@ help:
 	@echo "Usage: \n"
 	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /' | sort
 
-.PHONY: all help bootstrap test gems certs lint fmt homebrew swiftlint project clean hook
+.PHONY: all help bootstrap test gems certs lint fmt homebrew project clean hook

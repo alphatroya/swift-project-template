@@ -4,5 +4,5 @@
 --maxwidth 140
 --wraparguments before-first
 --wrapcollections before-first
---enable isEmpty,organizeDeclarations,markTypes,preferDouble
+--enable isEmpty,organizeDeclarations,markTypes,blankLineAfterImports
 --lifecycle viewDidLoad,viewWillAppear,viewDidAppear,viewDidDisappear,viewWillDisappear
