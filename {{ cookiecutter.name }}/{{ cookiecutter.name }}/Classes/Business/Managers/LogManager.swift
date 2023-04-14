@@ -40,5 +40,4 @@ extension OSLog {
     static let network = OSLog(subsystem: subsystem ?? "", category: "network")
 }
 
-// swiftlint:disable:next prefixed_toplevel_constant
 let log = LogManager()

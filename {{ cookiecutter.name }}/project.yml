@@ -44,10 +44,10 @@ targets:
       - script: |
                 if [ "${CONFIGURATION}" == "Debug" ]; then
                   if which mint >/dev/null; then
-                    make lint
+                    make fmt
                   fi
                 fi
-        name: SwiftLint
+        name: SwiftFormat
     attributes:
       ProvisioningStyle: Manual
       DevelopmentTeam: {{ cookiecutter.development_team_id }}

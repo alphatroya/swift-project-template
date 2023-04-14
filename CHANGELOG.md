@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.37] - 2023-04-14
+## Changed
+- Обновил SwiftFormat до версии 0.51.6
+## Removed
+- Удалил SwiftLint, линтер в проекте заменён на SwiftFormat
+
 ## [1.2.36] - 2023-04-11
 ## Removed
 - Удалил URLRequest+Debug.swift файл, вынес его содержимое в отдельную [библиотеку](https://github.com/alphatroya/curlifier)
