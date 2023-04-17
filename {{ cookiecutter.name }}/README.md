@@ -7,17 +7,12 @@
 make bootstrap
 ```
 
-## Bitrise CI configuration
+## Xcode version
+The project must use the specific version of Xcode that is specified in the `.xcode-version` file. This is important to ensure that everyone on the team is using the same version of Xcode, which avoids compatibility issues and makes it easier to collaborate.
 
-Configure Bitrise for using stored in repository `bitrise.yml` file.
+To ensure everyone has the correct version of Xcode, it's highly recommended to use [xcodes](https://github.com/RobotsAndPencils/xcodes) tool, which can automatically install and select the right Xcode version using the `xcodes install` and `xcodes select` commands.
 
-Also, some secret environment parameters need to be set:
-
-- `$MATCH_PASSWORD`: password to the [match](https://docs.fastlane.tools/actions/match/) repo
-- `$APPSTORE_API_KEY_ENCRYPT_PWD`: password for the encrypted `api-key.json` file
-
-## Xcode
-The project uses the version of Xcode specified in the `.xcode-version` file
+Before launching the project, it's important to confirm that each team member has installed the correct version of Xcode using the 'xcodes' tool. This will help ensure a smooth launch and prevent any problems down the line.
 
 ## Template info
 
