@@ -10,5 +10,9 @@
         "No"
     ],
     "development_itc_team": "",
-    "feedback_email": ""
+    "feedback_email": "",
+    "ignore_xcproject": [
+        "Yes",
+        "No"
+    ]
 }
