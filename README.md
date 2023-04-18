@@ -2,7 +2,7 @@
 
 ![Build project and run tests](https://github.com/alphatroya/swift-project-template/workflows/Build%20project%20and%20run%20tests/badge.svg)
 
-This project template was used by me to jump-start the new iOS app project. It comes with a minimalistic design, a well-defined file structure, and several pre-configured tools to make the development experience more productive and efficient.
+This project template was used by me to jump-start new iOS app projects. It comes with a minimalistic design, a well-defined file structure, and several pre-configured tools to make the development experience more productive and efficient.
 
 ## Features
 
@@ -30,7 +30,7 @@ Make sure that `cookiecutter` and `mint` tools are installed. Preferred way to m
 brew install cookiecutter mint
 ```
 
-### Installing
+### Bootstrap a new project
 
 ```sh
 cookiecutter gh:alphatroya/swift-project-template`
