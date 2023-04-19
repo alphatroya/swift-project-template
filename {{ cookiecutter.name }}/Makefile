@@ -41,10 +41,11 @@ lint:
 swiftgen:
 	mint run swiftgen
 
+GIT_HOOKS_SCRIPTS := $(wildcard hooks/*)
+
 ## hook: Install git pre-commit hook
 hook:
-	ln -sf ../../hooks/pre-commit .git/hooks/pre-commit
-	chmod +x .git/hooks/pre-commit
+	$(foreach file,$(GIT_HOOKS_SCRIPTS),ln -sf ../../$(file) .git/$(file); chmod +x .git/$(file);)
 
 ## clean: Clean up project files
 clean:
