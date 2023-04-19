@@ -19,7 +19,7 @@ Before launching the project, it's important to confirm that each team member ha
 The project was generated using the [cookiecutter tool](https://github.com/audreyr/cookiecutter)
 and [this](https://github.com/alphatroya/swift-project-template) swift template.
 
-Template version: 1.2.38
+Template version: 1.2.39
 
 ## AppStore credentials
 

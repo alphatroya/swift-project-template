@@ -41,13 +41,6 @@ targets:
                   fi
                 fi
         name: SwiftGen
-      - script: |
-                if [ "${CONFIGURATION}" == "Debug" ]; then
-                  if which mint >/dev/null; then
-                    make fmt
-                  fi
-                fi
-        name: SwiftFormat
     attributes:
       ProvisioningStyle: Manual
       DevelopmentTeam: {{ cookiecutter.development_team_id }}
@@ -75,3 +68,11 @@ targets:
       - {{ cookiecutter.name }}Tests
     dependencies:
       - target: {{ cookiecutter.name | lower }}
+    prebuildScripts:
+      - script: |
+                if [ "${CONFIGURATION}" == "Debug" ]; then
+                  if which mint >/dev/null; then
+                    make fmt
+                  fi
+                fi
+        name: SwiftFormat
