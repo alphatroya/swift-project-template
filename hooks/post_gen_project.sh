@@ -24,4 +24,4 @@ git init
 git add .
 git commit -m "Initial commit"
 
-make hook
+make hooks
