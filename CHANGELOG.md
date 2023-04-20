@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.40] - 2023-04-20
+### Changed
+- Отключил basedOnDependencyAnalysis для SwiftGen скрипта
+- Удалил SwiftFormat билд скрипт
+
 ## [1.2.39] - 2023-04-19
 ### Changed
 - Изменено поведение pre-commit хука на линтинг, вместо форматирования.
