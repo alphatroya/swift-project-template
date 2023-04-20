@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.41] - 2023-04-20
+### Changed
+- Реорганизовал .PHONY таргеты в Makefile
+- Переименовал `make hook` -> `make hooks`
+
 ## [1.2.40] - 2023-04-20
 ### Changed
 - Отключил basedOnDependencyAnalysis для SwiftGen скрипта
