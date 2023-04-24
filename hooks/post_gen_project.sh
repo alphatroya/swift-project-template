@@ -2,6 +2,9 @@
 
 # Generate xcodeproj file
 make project
+#
+# Generate SwiftGen xcfilelist
+make xcfilelist
 
 # Generate SwiftGen files
 make swiftgen
