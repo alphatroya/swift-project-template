@@ -41,7 +41,10 @@ targets:
                   fi
                 fi
         name: SwiftGen
-        basedOnDependencyAnalysis: false
+        inputFileLists:
+          - $(SRCROOT)/swiftgen-input-files.xcfilelist
+        outputFileLists:
+          - $(SRCROOT)/swiftgen-output-files.xcfilelist
     attributes:
       ProvisioningStyle: Manual
       DevelopmentTeam: {{ cookiecutter.development_team_id }}

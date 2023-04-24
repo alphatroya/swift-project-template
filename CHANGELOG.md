@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.0] - 2023-04-24
+### Changed
+- Добавлена поддержка xcfilelist для swiftgen билд скрипта
+
 ## [1.2.41] - 2023-04-20
 ### Changed
 - Реорганизовал .PHONY таргеты в Makefile

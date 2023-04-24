@@ -1,7 +1,7 @@
 API_KEY := fastlane/api-key.json
 
 .PHONY: all
-all: bootstrap
+all: test
 
 $(API_KEY):
 	touch $@
@@ -45,6 +45,13 @@ fmt:
 ## lint: Launch swift files linter check
 lint:
 	mint run swiftformat {{ cookiecutter.name }} {{ cookiecutter.name }}Tests --lint
+
+.PHONY: xcfilelist
+## xcfilelist: Regenerate xcfilelist files
+xcfilelist:
+	mint run swiftgen config generate-xcfilelists \
+		--inputs swiftgen-input-files.xcfilelist \
+		--outputs swiftgen-output-files.xcfilelist
 
 .PHONY: swiftgen
 ## swiftgen: Trigger code generation from assets with swiftgen tool
