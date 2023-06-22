@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.1] - 2023-06-22
+### Changed
+- Изменил настройку codesign проекта на Automatic
+
 ## [1.3.0] - 2023-04-24
 ### Changed
 - Добавлена поддержка xcfilelist для swiftgen билд скрипта
