@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.2] - 2023-06-26
+### Removed
+- Удалил LogManager
+
 ## [1.3.1] - 2023-06-22
 ### Changed
 - Изменил настройку codesign проекта на Automatic

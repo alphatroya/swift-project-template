@@ -15,7 +15,7 @@ class ParentVC: UIViewController {
     }
 
     deinit {
-        log.debug("%{public}@ released 🙌", String(describing: type(of: self)))
+        print("%{public}@ released 🙌", String(describing: type(of: self)))
     }
 }
 
