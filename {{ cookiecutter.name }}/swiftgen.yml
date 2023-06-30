@@ -11,11 +11,6 @@ xcassets:
     outputs:
         templateName: swift5
         output: Assets.swift
-plist:
-    inputs: Info.plist
-    outputs:
-        templateName: runtime-swift5
-        output: Plist.swift
 ib:
     inputs: Storyboards
     outputs:
