@@ -14,13 +14,6 @@ To ensure everyone has the correct version of Xcode, it's highly recommended to 
 
 Before launching the project, it's important to confirm that each team member has installed the correct version of Xcode using the 'xcodes' tool. This will help ensure a smooth launch and prevent any problems down the line.
 
-## Template info
-
-The project was generated using the [cookiecutter tool](https://github.com/audreyr/cookiecutter)
-and [this](https://github.com/alphatroya/swift-project-template) swift template.
-
-Template version: 1.4.1
-
 ## AppStore credentials
 
 Interaction with AppStore needs credentials. This project uses the official [AppStore API](https://docs.fastlane.tools/app-store-connect-api). For proper project deployment process, the project owner needs to create the `fastlane/app-key.json` file with access keys and encrypt by gpg tool with a strong password.
@@ -32,3 +25,7 @@ The resulted encrypted file should be committed to the repository.
 ## Copyright
 
 {{ cookiecutter.organization }} ©
+
+---
+
+This project was created using [the project template](https://github.com/alphatroya/swift-project-template) version 1.5.0.
