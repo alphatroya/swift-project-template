@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.5.0] - 2023-08-15
+### Changed
+- Обновил Xcodegen до 2.36.0 и swiftformat до 0.52.0
+
 ## [1.4.1] - 2023-06-30
 ### Removed
 - Удалена генерация SwiftGen файла из Info.plist
