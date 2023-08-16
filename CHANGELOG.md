@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.6.0] - 2023-08-16
+### Changed
+- Обновил структуру папок в Classes
+
 ## [1.5.0] - 2023-08-15
 ### Changed
 - Обновил Xcodegen до 2.36.0 и swiftformat до 0.52.0
