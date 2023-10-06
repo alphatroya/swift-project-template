@@ -1,11 +1,5 @@
 input_dir: {{ cookiecutter.name }}/Resources/
 output_dir: {{ cookiecutter.name }}/Classes/Generated
-strings:
-    inputs:
-        - ru.lproj/Localizable.strings
-    outputs:
-        templateName: structured-swift5
-        output: Strings.swift
 ib:
     inputs: Storyboards
     outputs:
