@@ -20,8 +20,10 @@ jobs:
 
       - name: Generate project and run tests
         run: |
-          brew install cookiecutter mint
-          cookiecutter --no-input -f .
-          cd Project
-          mint bootstrap
+          export PATH=~/.rbenv/shims:"$PATH"
+
+          brew install cookiecutter rbenv &&
+          rbenv install 2.7.7 && rbenv global 2.7.7 &&
+          cookiecutter --no-input -f . &&
+          cd Project &&
           make test

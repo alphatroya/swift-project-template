@@ -1,5 +1,6 @@
 name: {{ cookiecutter.name }}
 options:
+  postGenCommand: "bundle install && bundle exec pod install"
   deploymentTarget:
     iOS: {{ cookiecutter.deployment_target }}
   developmentLanguage: ru
@@ -41,11 +42,7 @@ targets:
         - {{ cookiecutter.name | lower }}Tests
     prebuildScripts:
       - script: |
-                if [ "${CONFIGURATION}" == "Debug" ]; then
-                  if which mint >/dev/null; then
-                    make swiftgen
-                  fi
-                fi
+          "${PODS_ROOT}/SwiftGen/bin/swiftgen"
         name: SwiftGen
         inputFileLists:
           - $(SRCROOT)/swiftgen-input-files.xcfilelist

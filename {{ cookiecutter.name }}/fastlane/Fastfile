@@ -48,10 +48,6 @@ platform :ios do
       readonly: true
     )
 
-    add_badge(
-      glob: '/{{ cookiecutter.name }}/**/*.appiconset/*.{png, PNG}'
-    )
-
     increment_build_number(
       build_number: build_number
     )

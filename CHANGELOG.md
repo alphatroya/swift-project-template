@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0] - 2024-02-13
+### Changed
+- Перешел на Cocoapods PM
+### Removed
+- Удален fastlane badge plugin
+
 ## [1.9.0] - 2023-12-22
 ### Added
 - Добавлен .ruby-version файл

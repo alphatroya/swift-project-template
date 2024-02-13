@@ -15,7 +15,10 @@ echo 'fastlane/api-key.json' >> .gitignore
 echo '.cache' >> .gitignore
 {% if cookiecutter.ignore_xcproject == "Yes" %}
     echo '{{ cookiecutter.name }}.xcodeproj' >> .gitignore
+    echo '{{ cookiecutter.name }}.xcworkspace' >> .gitignore
 {% endif %}
+
+echo 'Pods' >> .gitignore
 
 make fmt
 make gems
