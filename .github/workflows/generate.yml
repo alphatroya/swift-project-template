@@ -22,7 +22,7 @@ jobs:
         run: |
           export PATH=~/.rbenv/shims:"$PATH"
 
-          brew install cookiecutter rbenv &&
+          brew install cookiecutter rbenv mint &&
           rbenv install 2.7.7 && rbenv global 2.7.7 &&
           cookiecutter --no-input -f . &&
           cd Project &&
