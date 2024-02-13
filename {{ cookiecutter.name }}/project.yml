@@ -1,6 +1,6 @@
 name: {{ cookiecutter.name }}
 options:
-  postGenCommand: "bundle install && bundle exec pod install"
+  postGenCommand: "make pods"
   deploymentTarget:
     iOS: {{ cookiecutter.deployment_target }}
   developmentLanguage: ru

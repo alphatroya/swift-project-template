@@ -9,6 +9,10 @@ deploy_dir = ENV['BITRISE_DEPLOY_DIR']
 
 platform :ios do
 
+  before_each do
+    skip_docs
+  end
+
   desc 'Create a new application on the developer portal'
   lane :create do
     produce
