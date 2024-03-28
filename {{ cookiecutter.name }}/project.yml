@@ -67,3 +67,6 @@ targets:
       - {{ cookiecutter.name }}Tests
     dependencies:
       - target: {{ cookiecutter.name | lower }}
+    settings:
+      base:
+        PRODUCT_MODULE_NAME: {{ cookiecutter.name | lower }}Tests
