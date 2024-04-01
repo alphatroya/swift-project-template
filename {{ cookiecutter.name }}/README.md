@@ -28,4 +28,4 @@ The resulted encrypted file should be committed to the repository.
 
 ---
 
-This project was created using [the project template](https://github.com/alphatroya/swift-project-template) version 2.0.1.
+This project was created using [the project template](https://github.com/alphatroya/swift-project-template) version 2.1.0.
