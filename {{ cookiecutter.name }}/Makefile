@@ -10,8 +10,7 @@ $(API_KEY):
 
 .PHONY: bootstrap
 ## bootstrap: Bootstrap project dependencies for development
-bootstrap: homebrew hook certs
-	mint bootstrap
+bootstrap: hook certs
 
 .PHONY: pods
 ## pods: Download project packages
@@ -37,11 +36,6 @@ test: gems $(API_KEY)
 ## gems: Install ruby dependencies
 gems:
 	bundle install
-
-.PHONY: homebrew
-## homebrew: Bootstrap Homebrew dependencies
-homebrew:
-	brew bundle check || brew bundle
 
 .PHONY: fmt
 ## fmt: Launch swift files code formatter
