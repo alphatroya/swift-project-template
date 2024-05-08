@@ -1,14 +1,5 @@
 input_dir: {{ cookiecutter.name }}/Resources/
 output_dir: {{ cookiecutter.name }}/Classes/Generated
-ib:
-    inputs: Storyboards
-    outputs:
-        - templateName: scenes-swift5
-          output: StoryboardScenes.swift
-          params:
-            ignoreTargetModule: true
-        - templateName: segues-swift5
-          output: StoryboardSegues.swift
 fonts:
     inputs: Fonts
     outputs:
