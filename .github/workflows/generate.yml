@@ -11,19 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Cache Mint
-        id: cache-mint
-        uses: actions/cache@v3
-        with:
-          path: ~/mint_cache
-          key: cache
-
       - name: Generate project and run tests
         run: |
           export PATH=~/.rbenv/shims:"$PATH"
 
-          brew install cookiecutter rbenv mint &&
-          rbenv install 2.7.7 && rbenv global 2.7.7 &&
+          brew install cookiecutter rbenv &&
+          rbenv install &&
           cookiecutter --no-input -f . &&
           cd Project &&
           make test
