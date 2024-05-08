@@ -16,7 +16,7 @@ jobs:
           export PATH=~/.rbenv/shims:"$PATH"
 
           brew install cookiecutter rbenv &&
-          rbenv install &&
+          rbenv install 3.0.7 &&
           cookiecutter --no-input -f . &&
           cd Project &&
           make test
