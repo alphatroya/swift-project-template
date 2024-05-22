@@ -8,10 +8,6 @@ all: test
 $(API_KEY):
 	touch $@
 
-.PHONY: bootstrap
-## bootstrap: Bootstrap project dependencies for development
-bootstrap: hook certs
-
 .PHONY: pods
 ## pods: Download project packages
 pods: gems
@@ -24,7 +20,7 @@ certs: gems $(API_KEY)
 
 .PHONY: project
 ## project: Generate .xcodeproj file using XcodeGen utility
-project:
+project: gems
 	mint run "yonaskolb/XcodeGen@2.38.0"
 
 .PHONY: test
@@ -69,7 +65,7 @@ hooks:
 .PHONY: clean
 ## clean: Clean up project files
 clean:
-	rm -fr .cache .build
+	rm -fr .cache .build Pods
 
 .PHONY: help
 ## help: Prints help message
