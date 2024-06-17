@@ -4,7 +4,7 @@ inhibit_all_warnings!
 
 target '{{ cookiecutter.name | lower }}' do
     pod 'SwiftGen', '~> 6.6.3'
-    pod 'SwiftFormat/CLI', '~> 0.53'
+    pod 'SwiftFormat/CLI', '~> 0.54'
 
     target '{{ cookiecutter.name | lower }}Tests' do
         inherit! :search_paths
