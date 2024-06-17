@@ -4,5 +4,6 @@
 --maxwidth 140
 --wraparguments before-first
 --wrapcollections before-first
---enable isEmpty,organizeDeclarations,markTypes,blankLineAfterImports
+--enable isEmpty,organizeDeclarations,markTypes,redundantProperty,blankLineAfterSwitchCase
 --lifecycle viewDidLoad,viewWillAppear,viewDidAppear,viewDidDisappear,viewWillDisappear
+--organizationmode type
