@@ -1,3 +1,0 @@
-app_identifier "{{ cookiecutter.bundle_id }}"
-team_id "{{ cookiecutter.development_team_id }}"
-itc_team_name "{{ cookiecutter.development_itc_team }}"

@@ -11,8 +11,6 @@ Here are some of the key features of this project template:
 - **A Minimalistic Design**: The design of this project template is simple and clean, includes only required tools.
 - **File Structure**: The project template provides file structure, making it easy to organize your code and assets.
 - **Source Code Linter and Formatter**: The project template comes pre-configured SwiftFormat formatter and linter that help ensure your code follows best practices and is easy to read and understand.
-- **Asset's Code Generation**: The project template uses SwiftGen to generate code for assets, fonts, strings, and storyboards.
-- **Fastlane**: The project template includes an out-the-box Fastlane setup, allowing you to easily automate tasks such as building, testing, and deploying your app.
 - **Git Hooks**: Git hooks are installed during bootstrap.
 - **Xcode Project File Generation**: The project template includes a script that generates an Xcode project file, which avoid merge conflicts during teamwork.
 - **No External Framework Dependencies**: The project template does not rely on any external frameworks or libraries, making it easy to maintain and update.

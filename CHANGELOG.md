@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.4.0] - 2024-06-17
+
+### Removed
+
+- Удалена fastlane папка, предпочтительный способ конфигурации fastlane - `fastlane init`
+
 ## [2.3.0] - 2024-06-17
 
 ### Changed

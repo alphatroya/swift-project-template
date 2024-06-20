@@ -11,7 +11,6 @@ make swiftgen
 
 # Download .gitignore file
 curl -L 'https://www.gitignore.io/api/swift,macos,fastlane' > .gitignore
-echo 'fastlane/api-key.json' >> .gitignore
 echo '.cache' >> .gitignore
 {% if cookiecutter.ignore_xcproject == "Yes" %}
     echo '{{ cookiecutter.name }}.xcodeproj' >> .gitignore
