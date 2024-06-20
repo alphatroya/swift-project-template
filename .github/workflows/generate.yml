@@ -15,8 +15,8 @@ jobs:
         run: |
           export PATH=~/.rbenv/shims:"$PATH"
 
-          brew install cookiecutter rbenv mint &&
+          brew install cookiecutter rbenv mint fastlane &&
           rbenv install 3.0.6 &&
           cookiecutter --no-input -f . &&
           cd Project &&
-          make test
+          fastlane scan

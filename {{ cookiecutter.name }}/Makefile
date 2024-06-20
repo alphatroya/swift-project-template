@@ -1,32 +1,18 @@
-API_KEY := fastlane/api-key.json
 SWIFTGEN = Pods/SwiftGen/bin/swiftgen
 SWIFTFORMAT = Pods/SwiftFormat/CommandLineTool/swiftformat
 
 .PHONY: all
 all: test
 
-$(API_KEY):
-	touch $@
-
 .PHONY: pods
 ## pods: Download project packages
 pods: gems
 	bundle exec pod install
 
-.PHONY: certs
-## certs: Download Apple certificates for development
-certs: gems $(API_KEY)
-	bundle exec fastlane match development --readonly
-
 .PHONY: project
 ## project: Generate .xcodeproj file using XcodeGen utility
 project: gems
 	mint run "yonaskolb/XcodeGen@2.38.0"
-
-.PHONY: test
-## test: Launch unit tests
-test: gems $(API_KEY)
-	bundle exec fastlane test
 
 .PHONY: gems
 ## gems: Install ruby dependencies

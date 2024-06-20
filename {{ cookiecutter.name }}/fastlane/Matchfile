@@ -1,2 +1,0 @@
-git_url "{{ cookiecutter.match_repo_url }}"
-clone_branch_directly true
