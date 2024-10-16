@@ -1,0 +1,12 @@
+push-new-branches = false
+ship-delete-tracking-branch = true
+sync-upstream = false
+
+[branches]
+main = "develop"
+perennials = ["main"]
+perennial-regex = ""
+
+[sync-strategy]
+feature-branches = "merge"
+perennial-branches = "rebase"
