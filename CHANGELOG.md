@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.5.0] - 2024-10-16
+### Added
+- Добавлен `.git-branches.toml` файл для настройки работы проекта с [git-town](https://github.com/git-town/git-town).
+
 ## [2.4.0] - 2024-06-20
 
 ### Removed
