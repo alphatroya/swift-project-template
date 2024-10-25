@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.0] - TBA
+### Removed
+- Полностью удалена зависимость от SwiftGen
+
 ## [2.5.0] - 2024-10-16
 ### Added
 - Добавлен `.git-branches.toml` файл для настройки работы проекта с [git-town](https://github.com/git-town/git-town).

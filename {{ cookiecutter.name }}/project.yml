@@ -40,14 +40,6 @@ targets:
     scheme:
       testTargets:
         - {{ cookiecutter.name | lower }}Tests
-    prebuildScripts:
-      - script: |
-          "${PODS_ROOT}/SwiftGen/bin/swiftgen"
-        name: SwiftGen
-        inputFileLists:
-          - $(SRCROOT)/swiftgen-input-files.xcfilelist
-        outputFileLists:
-          - $(SRCROOT)/swiftgen-output-files.xcfilelist
     attributes:
       ProvisioningStyle: Automatic
       DevelopmentTeam: {{ cookiecutter.development_team_id }}

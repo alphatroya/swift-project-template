@@ -1,4 +1,3 @@
-SWIFTGEN = Pods/SwiftGen/bin/swiftgen
 SWIFTFORMAT = Pods/SwiftFormat/CommandLineTool/swiftformat
 
 .PHONY: all
@@ -28,18 +27,6 @@ fmt:
 ## lint: Launch swift files linter check
 lint:
 	$(SWIFTFORMAT) {{ cookiecutter.name }} {{ cookiecutter.name }}Tests --lint
-
-.PHONY: xcfilelist
-## xcfilelist: Regenerate xcfilelist files
-xcfilelist:
-	$(SWIFTGEN) config generate-xcfilelists \
-		--inputs swiftgen-input-files.xcfilelist \
-		--outputs swiftgen-output-files.xcfilelist
-
-.PHONY: swiftgen
-## swiftgen: Trigger code generation from assets with swiftgen tool
-swiftgen:
-	$(SWIFTGEN)
 
 GIT_HOOKS_SCRIPTS := $(wildcard hooks/*)
 

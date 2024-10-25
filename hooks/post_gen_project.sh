@@ -2,12 +2,6 @@
 
 # Generate xcodeproj file
 make project
-#
-# Generate SwiftGen xcfilelist
-make xcfilelist
-
-# Generate SwiftGen files
-make swiftgen
 
 # Download .gitignore file
 curl -L 'https://www.gitignore.io/api/swift,macos,fastlane' > .gitignore
