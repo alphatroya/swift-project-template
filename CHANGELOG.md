@@ -1,6 +1,9 @@
 # Changelog
 
 ## [3.0] - TBA
+### Changed
+- Обновлена версия Swift до 6.0
+
 ### Removed
 - Полностью удалена зависимость от SwiftGen
 
