@@ -23,4 +23,4 @@ git init
 git add .
 git commit -m "Initial commit"
 
-make hooks
+mise generate pre-commit
