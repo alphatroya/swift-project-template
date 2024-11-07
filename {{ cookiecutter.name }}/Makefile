@@ -3,20 +3,10 @@ SWIFTFORMAT = Pods/SwiftFormat/CommandLineTool/swiftformat
 .PHONY: all
 all: test
 
-.PHONY: pods
-## pods: Download project packages
-pods: gems
-	bundle exec pod install
-
 .PHONY: project
 ## project: Generate .xcodeproj file using XcodeGen utility
-project: gems
+project:
 	mint run "yonaskolb/XcodeGen@2.38.0"
-
-.PHONY: gems
-## gems: Install ruby dependencies
-gems:
-	bundle install
 
 .PHONY: fmt
 ## fmt: Launch swift files code formatter

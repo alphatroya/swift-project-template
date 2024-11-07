@@ -5,6 +5,7 @@
 - Обновлена версия Swift до 6.0
 ### Removed
 - Удален .git-branches.toml
+- Удален Podfile
 
 ### Removed
 - Полностью удалена зависимость от SwiftGen
