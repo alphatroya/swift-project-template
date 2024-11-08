@@ -1,6 +1,5 @@
 name: {{ cookiecutter.name }}
 options:
-  postGenCommand: "make pods"
   deploymentTarget:
     iOS: {{ cookiecutter.deployment_target }}
   developmentLanguage: ru

@@ -1,5 +1,6 @@
 import UIKit
 
+@MainActor
 private let kHideKeyboardDelegate = HideKeyboardDelegate()
 
 private class HideKeyboardDelegate: NSObject, UIGestureRecognizerDelegate {
@@ -20,4 +21,3 @@ extension UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
 }
-

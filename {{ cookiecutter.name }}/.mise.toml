@@ -1,7 +1,8 @@
 [tasks]
-lint = "swiftformat GrowFood --lint"
-fmt = "swiftformat GrowFood"
+pre-commit = "swiftformat {{ cookiecutter.name }} {{ cookiecutter.name }}Tests --lint"
+fmt = "swiftformat {{ cookiecutter.name }} {{ cookiecutter.name }}Tests"
 
 [tools]
 xcodes = "1.5.0"
-"spm:nicklockwood/SwiftFormat" = "0.54.6"
+swiftformat = "0.54.6"
+xcodegen = "latest"

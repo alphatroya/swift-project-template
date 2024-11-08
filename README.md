@@ -22,10 +22,10 @@ Here are some of the key features of this project template:
 
 ### Prerequisites
 
-Make sure that `cookiecutter` and `mint` tools are installed. Preferred way to make it is using homebrew.
+Make sure that `cookiecutter` and `mise` tools are installed. Preferred way to make it is using homebrew.
 
 ```sh
-brew install cookiecutter mint
+brew install cookiecutter mise
 ```
 
 ### Bootstrap a new project
