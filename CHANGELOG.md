@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.0] - TBA
+## [3.0] - 2024-11-11
 ### Changed
 - Обновлена версия Swift до 6.0
 ### Removed
