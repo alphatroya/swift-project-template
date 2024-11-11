@@ -4,7 +4,7 @@
 mise install
 
 # Generate xcodeproj file
-mise exec -- xcodegen
+mise run project
 
 # Download .gitignore file
 curl -L 'https://www.gitignore.io/api/swift,macos,fastlane' > .gitignore

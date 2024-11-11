@@ -6,6 +6,7 @@
 ### Removed
 - Удален .git-branches.toml
 - Удален Podfile
+- Удален Makefile, проект мигрирован на использование mise
 
 ### Removed
 - Полностью удалена зависимость от SwiftGen
