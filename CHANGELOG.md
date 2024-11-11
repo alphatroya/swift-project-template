@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.0] - TBA
+### Changed
+- Обновлена версия Swift до 6.0
+### Removed
+- Удален .git-branches.toml
+- Удален Podfile
+- Удален Makefile, проект мигрирован на использование mise
+- Полностью удалена зависимость от SwiftGen
+
 ## [2.5.0] - 2024-10-16
 ### Added
 - Добавлен `.git-branches.toml` файл для настройки работы проекта с [git-town](https://github.com/git-town/git-town).

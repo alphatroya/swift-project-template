@@ -4,19 +4,17 @@ on: [push]
 
 jobs:
   test:
-    runs-on: macos-14
-    env:
-      MINT_PATH: "~/mint_cache"
+    runs-on: macos-15
 
     steps:
       - uses: actions/checkout@v1
 
       - name: Generate project and run tests
         run: |
-          export PATH=~/.rbenv/shims:"$PATH"
-
-          brew install cookiecutter rbenv mint fastlane &&
-          rbenv install 3.0.6 &&
+          brew install cookiecutter mise fastlane &&
+          mise settings set experimental true &&
+          mise activate --shims &&
           cookiecutter --no-input -f . &&
           cd Project &&
+          mise install &&
           fastlane scan

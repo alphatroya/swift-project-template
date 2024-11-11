@@ -1,7 +1,0 @@
-input_dir: {{ cookiecutter.name }}/Resources/
-output_dir: {{ cookiecutter.name }}/Classes/Generated
-fonts:
-    inputs: Fonts
-    outputs:
-        templateName: swift5
-        output: Fonts.swift

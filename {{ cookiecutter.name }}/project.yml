@@ -1,6 +1,5 @@
 name: {{ cookiecutter.name }}
 options:
-  postGenCommand: "make pods"
   deploymentTarget:
     iOS: {{ cookiecutter.deployment_target }}
   developmentLanguage: ru
@@ -19,7 +18,7 @@ settings:
     VERSIONING_SYSTEM: apple-generic
     CURRENT_PROJECT_VERSION: 1
     MARKETING_VERSION: 1.0
-    SWIFT_VERSION: 5.0
+    SWIFT_VERSION: 6.0
     DEVELOPMENT_TEAM: {{ cookiecutter.development_team_id }}
     GENERATE_INFOPLIST_FILE: YES
     INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
@@ -40,14 +39,6 @@ targets:
     scheme:
       testTargets:
         - {{ cookiecutter.name | lower }}Tests
-    prebuildScripts:
-      - script: |
-          "${PODS_ROOT}/SwiftGen/bin/swiftgen"
-        name: SwiftGen
-        inputFileLists:
-          - $(SRCROOT)/swiftgen-input-files.xcfilelist
-        outputFileLists:
-          - $(SRCROOT)/swiftgen-output-files.xcfilelist
     attributes:
       ProvisioningStyle: Automatic
       DevelopmentTeam: {{ cookiecutter.development_team_id }}
