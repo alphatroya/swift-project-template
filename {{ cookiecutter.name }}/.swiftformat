@@ -1,9 +1,9 @@
---swiftversion 5.9
+--swiftversion 6.1
 --header strip
 --exclude **/Generated
 --maxwidth 140
 --wraparguments before-first
 --wrapcollections before-first
---enable isEmpty,organizeDeclarations,markTypes,redundantProperty,blankLineAfterSwitchCase
+--enable isEmpty,organizeDeclarations,markTypes,redundantProperty,blankLineAfterSwitchCase,wrapMultilineFunctionChains,environmentEntry,emptyExtensions,preferSwiftTesting,blankLinesAfterGuardStatements,privateStateVariables
 --lifecycle viewDidLoad,viewWillAppear,viewDidAppear,viewDidDisappear,viewWillDisappear
 --organizationmode type
