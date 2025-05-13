@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.0.2] - 2025-05-13
+### Changed
+- Обновлен swiftformat до 0.56.0
+
 ## [3.0.1] - 2024-11-21
 ### Changed
 - Обновлен swiftformat до 0.55.1
