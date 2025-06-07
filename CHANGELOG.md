@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.0.3] - 2025-06-07
+### Changed
+- Включил unusedPrivateDeclarations opt-in правило для swiftformat
+
 ## [3.0.2] - 2025-05-13
 ### Changed
 - Обновлен swiftformat до 0.56.0

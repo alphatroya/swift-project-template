@@ -11,10 +11,10 @@ jobs:
 
       - name: Generate project and run tests
         run: |
-          brew install cookiecutter mise fastlane &&
+          brew install cookiecutter mise xcbeautify &&
           mise settings set experimental true &&
           mise activate --shims &&
           cookiecutter --no-input -f . &&
           cd Project &&
           mise install &&
-          fastlane scan
+          xcodebuild -project Project.xcodeproj -scheme project -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=latest' test | xcbeautify

@@ -4,6 +4,5 @@ fmt = "swiftformat {{ cookiecutter.name }} {{ cookiecutter.name }}Tests"
 project = "xcodegen"
 
 [tools]
-xcodes = "1.5.0"
-swiftformat = "0.55.1"
+swiftformat = "latest"
 xcodegen = "2.38.0"
