@@ -14,7 +14,7 @@ Here are some of the key features of this project template:
 - **Git Hooks**: Git hooks are installed during bootstrap.
 - **Xcode Project File Generation**: The project template includes a script that generates an Xcode project file, which avoid merge conflicts during teamwork.
 - **No External Framework Dependencies**: The project template does not rely on any external frameworks or libraries, making it easy to maintain and update.
-- **Version Lock**: A Mintfile provides tools version lock, ensuring that you always have the correct version of each tool.
+- **Version Lock**: A mise tool provides version lock, ensuring that you always have the correct version of each tool.
 - **.xcode-version support**: A .xcode-version file created during project bootstrap and specifies the version of Xcode required to build the project.
 - **.gitignore generation**: This ensures that unnecessary files are not tracked by Git.
 
