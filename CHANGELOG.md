@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.1.1] - 2025-06-24
+### Removed
+- UIViewController+Keyboard.swift
+
 ## [3.1.0] - 2025-06-24
 ### Changed
 - Перенес настройки проекта в xcconfig файлы
