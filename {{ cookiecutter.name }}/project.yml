@@ -1,7 +1,5 @@
 name: {{ cookiecutter.name }}
 options:
-  deploymentTarget:
-    iOS: {{ cookiecutter.deployment_target }}
   developmentLanguage: ru
   knownRegions: ["ru", "Base"]
   createIntermediateGroups: true
@@ -13,27 +11,13 @@ configs:
 configFiles:
   Debug: ./{{ cookiecutter.name }}/Resources/Configuration/Debug.xcconfig
   Release: ./{{ cookiecutter.name }}/Resources/Configuration/Release.xcconfig
-settings:
-  base:
-    VERSIONING_SYSTEM: apple-generic
-    CURRENT_PROJECT_VERSION: 1
-    MARKETING_VERSION: 1.0
-    SWIFT_VERSION: 6.0
-    DEVELOPMENT_TEAM: {{ cookiecutter.development_team_id }}
-    GENERATE_INFOPLIST_FILE: YES
-    INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
-    INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
-    INFOPLIST_KEY_UIStatusBarStyle: UIStatusBarStyleLightContent
-    ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: true
-  configs:
-    Debug:
-      OTHER_SWIFT_FLAGS: -D DEBUG
-    Release:
-      SWIFT_COMPILATION_MODE: wholemodule
 targets:
   {{ cookiecutter.name | lower }}:
     type: application
     platform: iOS
+    configFiles:
+      Debug: ./{{ cookiecutter.name }}/Resources/Configuration/Debug-App.xcconfig
+      Release: ./{{ cookiecutter.name }}/Resources/Configuration/Release-App.xcconfig
     sources:
       - path: {{ cookiecutter.name }}
     scheme:
@@ -42,22 +26,14 @@ targets:
     attributes:
       ProvisioningStyle: Automatic
       DevelopmentTeam: {{ cookiecutter.development_team_id }}
-    settings:
-      base:
-{% if cookiecutter.ipad == "Yes" %}
-        TARGETED_DEVICE_FAMILY: "1,2"
-{% else %}
-        TARGETED_DEVICE_FAMILY: "1"
-{% endif %}
-        PRODUCT_BUNDLE_IDENTIFIER: {{ cookiecutter.bundle_id }}
   {{ cookiecutter.name | lower }}Tests:
     type: bundle.unit-test
     platform: iOS
+    configFiles:
+      Debug: ./{{ cookiecutter.name }}/Resources/Configuration/Debug-Tests.xcconfig
+      Release: ./{{ cookiecutter.name }}/Resources/Configuration/Release-Tests.xcconfig
     sources:
       - {{ cookiecutter.name }}
       - {{ cookiecutter.name }}Tests
     dependencies:
       - target: {{ cookiecutter.name | lower }}
-    settings:
-      base:
-        PRODUCT_MODULE_NAME: {{ cookiecutter.name | lower }}Tests

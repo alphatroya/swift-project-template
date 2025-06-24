@@ -1,0 +1,6 @@
+{% if cookiecutter.ipad == "Yes" %}
+TARGETED_DEVICE_FAMILY = 1,2
+{% else %}
+TARGETED_DEVICE_FAMILY = 1
+{% endif %}
+PRODUCT_BUNDLE_IDENTIFIER = {{ cookiecutter.bundle_id }}

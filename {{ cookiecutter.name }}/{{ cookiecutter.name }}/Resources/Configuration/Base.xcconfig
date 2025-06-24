@@ -1,0 +1,12 @@
+VERSIONING_SYSTEM = apple-generic
+CURRENT_PROJECT_VERSION = 1
+MARKETING_VERSION = 1.0
+SWIFT_VERSION = 6.0
+DEVELOPMENT_TEAM = {{ cookiecutter.development_team_id }}
+GENERATE_INFOPLIST_FILE = YES
+INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait
+INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent
+ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = true
+SWIFT_EMIT_LOC_STRINGS = YES
+IPHONEOS_DEPLOYMENT_TARGET = {{ cookiecutter.deployment_target }}

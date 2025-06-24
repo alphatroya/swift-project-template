@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.1.0] - 2025-06-24
+### Changed
+- Перенес настройки проекта в xcconfig файлы
+
 ## [3.0.3] - 2025-06-07
 ### Changed
 - Включил unusedPrivateDeclarations opt-in правило для swiftformat
