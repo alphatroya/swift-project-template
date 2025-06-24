@@ -22,4 +22,4 @@ Before launching the project, it's important to confirm that each team member ha
 
 ---
 
-This project was created using [the project template](https://github.com/alphatroya/swift-project-template) version 3.1.0.
+This project was created using [the project template](https://github.com/alphatroya/swift-project-template) version 3.1.1.
