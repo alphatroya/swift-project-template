@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.2.1] - 2025-07-25
+### Changed
+- Обновил swiftformat до 0.57.2
+
 ## [3.2.0] - 2025-07-25
 ### Changed
 - Установил папки в проекте как syncedFolder
