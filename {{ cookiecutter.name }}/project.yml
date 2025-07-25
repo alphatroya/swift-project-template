@@ -20,6 +20,7 @@ targets:
       Release: ./{{ cookiecutter.name }}/Resources/Configuration/Release-App.xcconfig
     sources:
       - path: {{ cookiecutter.name }}
+        type: syncedFolder
     scheme:
       testTargets:
         - {{ cookiecutter.name | lower }}Tests
@@ -33,7 +34,9 @@ targets:
       Debug: ./{{ cookiecutter.name }}/Resources/Configuration/Debug-Tests.xcconfig
       Release: ./{{ cookiecutter.name }}/Resources/Configuration/Release-Tests.xcconfig
     sources:
-      - {{ cookiecutter.name }}
-      - {{ cookiecutter.name }}Tests
+      - path: {{ cookiecutter.name }}
+        type: syncedFolder
+      - path: {{ cookiecutter.name }}Tests
+        type: syncedFolder
     dependencies:
       - target: {{ cookiecutter.name | lower }}

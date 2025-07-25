@@ -5,4 +5,4 @@ project = "xcodegen"
 
 [tools]
 swiftformat = "latest"
-xcodegen = "2.38.0"
+xcodegen = "2.44.1"
