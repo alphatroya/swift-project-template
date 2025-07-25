@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.2.0] - 2025-07-25
+### Changed
+- Установил папки в проекте как syncedFolder
+
 ## [3.1.1] - 2025-06-24
 ### Removed
 - UIViewController+Keyboard.swift
